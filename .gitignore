@@ -39,6 +39,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-mental-health-chatbot/
-doctor-profile/
 
