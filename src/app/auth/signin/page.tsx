@@ -135,7 +135,7 @@ export default function SignUp() {
         <div className="flex-1 flex items-center justify-center">
           <div className="relative w-full max-w-md aspect-video">
             <Image
-              src={"/"} width={1000} height={800}
+              src={"/image.png"} width={1000} height={800}
               alt="Sign up illustration"
               className=""
               
