@@ -1,0 +1,202 @@
+
+/* Overall Page Background */
+.pageBackground {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  flex-direction: column;
+}
+.pageBackground {
+  background-color: #e4f7e4; /* Light green background for the page */
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  flex-direction: column;
+}
+
+/* Quiz Illustration Image */
+.quizImage {
+  position: absolute; /* Positioning the image absolutely */
+  left: 20px; /* Placing image on the left side */
+  top: 50%; /* Centering the image vertically */
+  transform: translateY(-50%); /* Perfect vertical centering */
+  width: 400px; /* Adjusted width to make it a little bigger */
+  height: auto; /* Ensures aspect ratio is preserved */
+  border-radius: 12px;
+  
+  z-index: 1; /* Ensure the image is behind the quiz container */
+}
+
+/* Quiz Container */
+.quizContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #eaf7f1; /* Light green background for the container */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  z-index: 2;
+  position: relative; /* Ensures proper stacking above background */
+}
+
+.quizContainer:hover {
+  transform: scale(1.02); /* Subtle hover effect */
+}
+
+/* Quiz Heading */
+.quizHeading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2e6a47; /* Darker green for heading */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Quiz Purpose Text */
+.quizPurpose {
+  font-size: 1.1rem;
+  color: #4d7c5f; /* Softer green color */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Quiz Question Text */
+.question {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2e6a47; /* Darker green for question text */
+  text-align: center;
+}
+
+/* Buttons Container for Quiz Answers */
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+/* Individual Radio Button Labels */
+.radioLabel {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #2e6a47; /* Darker green for radio button labels */
+  cursor: pointer;
+}
+
+/* Radio Button Styling */
+.radioButton {
+  margin-right: 12px;
+  transform: scale(1.2);
+}
+
+.radioText {
+  font-size: 1.1rem;
+}
+
+/* Navigation Buttons */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navButton,
+.submitButton {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background-color: #4caf50; /* Light green for buttons */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navButton:hover,
+.submitButton:hover {
+  background-color: #45a049;
+}
+
+/* Quiz Result Container */
+.resultContainer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #d4f1e2; /* Light green background for result */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Result Heading */
+.resultHeading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2e6a47; /* Darker green for result heading */
+  margin-bottom: 15px;
+}
+
+/* Result Text */
+.resultText {
+  font-size: 1.2rem;
+  color: #4d7c5f; /* Softer green for result text */
+  margin-top: 10px;
+}
+
+/* Retake Button */
+.retakeButton {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background-color: #81c784; /* Light green for retake button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.retakeButton:hover {
+  background-color: #66bb6a; /* Darker green on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .quizImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .quizContainer {
+    padding: 20px;
+  }
+
+  .quizHeading {
+    font-size: 2rem;
+  }
+
+  .question {
+    font-size: 1.2rem;
+  }
+
+  .radioText {
+    font-size: 1rem;
+  }
+
+  .navButton,
+  .submitButton,
+  .retakeButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

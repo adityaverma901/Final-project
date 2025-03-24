@@ -1,0 +1,86 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+model User {
+  id            Int           @id @default(autoincrement())
+  email         String        @unique
+  passwordHash  String
+  name          String
+  role          Role
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  doctorProfile Doctor?
+  appointments  Appointment[]
+  chatHistory   ChatHistory[]
+  quizResult    QuizResult?
+}
+
+model Doctor {
+  id             Int           @id @default(autoincrement())
+  userId         Int           @unique
+  specialization String
+  profileInfo    String
+  availableTimes Json         // Changed from String to Json for better data handling
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  appointments   Appointment[]
+}
+
+model Appointment {
+  id              Int               @id @default(autoincrement())
+  userId          Int
+  doctorId        Int
+  appointmentTime DateTime
+  status          AppointmentStatus
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  user            User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  doctor          Doctor            @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([doctorId])
+}
+
+model ChatHistory {
+  id              Int       @id @default(autoincrement())
+  userId          Int
+  message         String    @db.Text  // Added Text type for longer messages
+  timestamp       DateTime  @default(now())
+  isDoctorMessage Boolean
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model QuizResult {
+  id         Int      @id @default(autoincrement())
+  userId     Int      @unique
+  quizData   Json
+  score      Int
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+enum Role {
+  USER
+  DOCTOR
+}
+
+enum AppointmentStatus {
+  BOOKED
+  CANCELLED
+  COMPLETED
+}
