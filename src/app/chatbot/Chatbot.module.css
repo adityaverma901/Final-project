@@ -1,237 +1,309 @@
-/* Background container for the entire page */
-.background {
-  background-color: #e8f5e9; /* Softer green for a calming background */
-  min-height: 100vh;
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 20px;
+  height: 100vh;
+  background-color: #f0f4f1;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Main container for the chatbot */
-.chatbotContainer {
-  width: 50%;
-  max-width: 500px;
-  background: linear-gradient(145deg, #e8f5e9, #d4e7d8);
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  padding: 25px;
+/* Left Sidebar Styles */
+.leftSidebar {
+  width: 250px;
+  background-color: #2e5f3f;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+}
+
+.sidebarContent {
   display: flex;
   flex-direction: column;
-  height: 700px;
-  overflow: hidden;
-  position: relative;
+  align-items: center;
+  gap: 15px;
 }
 
-/* Header Section */
-.chatbotHeader {
+.username {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #f0f4f1;
+}
+
+.sidebarButton {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
   text-align: center;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #66bb6a;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.sidebarButton:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Main Content Styles */
+.mainContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f0f4f1;
+}
+
+.chatbotContainer {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .chatbotTitle {
-  font-size: 32px;
-  font-weight: bold;
-  color: #388e3c;
-  margin-bottom: 5px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #2e5f3f;
+  padding: 15px 0;
+  background-color: #e6f3e8;
 }
 
 .chatbotSubtitle {
-  font-size: 18px;
-  color: #66bb6a;
-  font-style: italic;
+  font-size: 16px;
+  color: #4a7f5c;
+  padding-bottom: 10px;
 }
 
-/* The chat window area */
+/* Chat Window Styles */
 .chatWindow {
-  flex-grow: 1;
+  height: 500px;
   overflow-y: auto;
-  margin-bottom: 20px;
-  padding: 10px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  position: relative;
-  background: #f1f8e9;
-  border-radius: 12px;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9fefa;
+  scrollbar-width: thin;
+  scrollbar-color: #2e5f3f #e0e0e0;
 }
 
-/* Chat messages styling */
-.userMessage, .botMessage {
-  padding: 12px 18px;
-  margin: 8px 0;
-  border-radius: 20px;
-  max-width: 80%;
-  word-wrap: break-word;
-  font-size: 16px;
+.chatWindow::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chatWindow::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+.chatWindow::-webkit-scrollbar-thumb {
+  background-color: #2e5f3f;
+  border-radius: 4px;
 }
 
 .userMessage {
   align-self: flex-end;
   background-color: #c8e6c9;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  color: #2e5f3f;
+  padding: 12px;
+  margin: 5px 0;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
 }
 
 .botMessage {
   align-self: flex-start;
-  background-color: #a5d6a7;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  background-color: #e0f8e0;
+  color: #2e5f3f;
+  padding: 12px;
+  margin: 5px 0;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
 }
 
-/* Input container */
+/* Input Container Styles */
 .inputContainer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 10px;
+  padding: 15px;
+  background-color: #f0f4f1;
+  border-top: 1px solid #e0e0e0;
 }
 
 .inputField {
   flex-grow: 1;
   padding: 12px;
+  border: 2px solid #2e5f3f;
+  border-radius: 8px;
   font-size: 16px;
-  border: 2px solid #66bb6a;
-  border-radius: 25px;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.inputField:focus {
-  border-color: #388e3c;
+  margin-right: 10px;
 }
 
 .sendButton {
-  background-color: #66bb6a;
-  color: #fff;
+  padding: 12px 20px;
+  background-color: #2e5f3f;
+  color: white;
   border: none;
-  padding: 12px;
-  border-radius: 50%;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
 }
 
 .sendButton:hover {
-  background-color: #388e3c;
+  background-color: #1e3f2b;
 }
 
-/* Smooth fade-in for new messages */
-.chatWindow .userMessage, .chatWindow .botMessage {
-  animation: fadeIn 0.3s ease-in-out;
+/* Right Sidebar Recommendations */
+.rightSidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 350px;
+  height: 100%;
+  background-color: #f0f4f1;
+  border-left: 3px solid #2e5f3f;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.recommendationsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
 }
 
-/* Speak Button Styles */
-.speakButton {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  margin-left: 8px;
-  color: #388e3c; /* Matches theme */
-  transition: color 0.3s ease;
+.recommendationCard {
+  background-color: white;
+  border: 2px solid #2e5f3f;
+  border-radius: 12px;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.speakButton:hover {
-  color: #1b5e20; /* Darker green on hover */
+.recommendationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(46, 95, 63, 0.2);
 }
 
-/* Speech Control Buttons (Pause, Resume, Restart) */
-.speechControls {
+.recommendationCardHeader {
   display: flex;
+  align-items: center;
   gap: 10px;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.pauseButton, .resumeButton, .restartButton {
-  background-color: transparent;
-  border: none;
+.categoryIcon {
+  color: #2e5f3f;
+  width: 24px;
+  height: 24px;
+}
+
+.recommendationLink {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #2e5f3f;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.recommendationLink:hover {
+  background-color: #1e3f2b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .leftSidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .rightSidebar {
+    position: static;
+    width: 100%;
+    border-left: none;
+    border-top: 3px solid #2e5f3f;
+  }
+  .inlineRecommendations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .inlineRecommendationCard {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 250px;
+  }
+  
+  .recommendationsSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .closeRecommendationsButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    }
+    
+}
+
+@media (max-width: 768px) {
+  .chatbotContainer {
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .chatWindow {
+    height: 400px;
+  }
+}
+
+.ttsControls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
-  font-size: 22px;
-  color: #FF9800; /* Orange for pause, resume, restart buttons */
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.ttsControls:hover {
+  opacity: 1;
+}
+
+.ttsIcon {
+  color: #666;
   transition: color 0.3s ease;
 }
 
-.pauseButton:hover {
-  color: #d84315; /* Darker orange on hover */
+.ttsIcon:hover {
+  color: #333;
 }
 
-.resumeButton:hover {
-  color: #4CAF50; /* Green on hover */
-}
-
-.restartButton:hover {
-  color: #2196F3; /* Blue on hover */
-}
-
-/* Tooltip Text for icons */
-.iconText {
-  visibility: hidden;
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 14px;
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.speakButton:hover .iconText,
-.pauseButton:hover .iconText,
-.resumeButton:hover .iconText,
-.restartButton:hover .iconText {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Position the text above the buttons */
-.speakButton, .pauseButton, .resumeButton, .restartButton {
+.botMessage {
   position: relative;
-}
-
-.speakButton .iconText,
-.pauseButton .iconText,
-.resumeButton .iconText,
-.restartButton .iconText {
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.speakButton:hover .iconText,
-.pauseButton:hover .iconText,
-.resumeButton:hover .iconText,
-.restartButton:hover .iconText {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Add this to your CSS module (e.g., Chatbot.module.css) */
-.highlight {
-  color: #ff4500; /* Orange color or any color of your choice */
-  font-weight: bold;
-  text-decoration: underline;
+  padding-right: 40px; /* Make space for TTS icon */
 }

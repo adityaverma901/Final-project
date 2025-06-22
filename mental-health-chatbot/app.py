@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import pandas as pd
 import json
+import random  # Import random module for selecting random responses
 from flask_cors import CORS  # To allow cross-origin requests
 from sentence_transformers import SentenceTransformer, util  # NLP Model
 
@@ -46,79 +47,114 @@ for intent in intents:
         json_patterns.append(pattern)
 
         if isinstance(responses, list) and responses:  # Ensure responses is a list and not empty
-            json_responses.append(responses[0])
+            json_responses.append(responses)  # Store the entire list of responses
         else:
             print(f"Warning: No valid responses found for pattern '{pattern}' in JSON.")
-            json_responses.append("I'm sorry, I don't have an answer for that.")  # Default response
+            json_responses.append(["I'm sorry, I don't have an answer for that."])  # Default response as a list
 
 json_embeddings = model.encode(json_patterns, convert_to_tensor=True)
 
-# Function to get an exact match response from JSON
-def get_response_from_json(user_input):
+# Enhanced function to format recommendation response
+def transform_recommendations(recommendation):
+    """
+    Convert recommendation to a more frontend-friendly format
+    """
+    print(f"Transforming recommendation: {recommendation}")  # Debug print
+    
+    # If recommendation is a simple string, return it as text
+    if isinstance(recommendation, str):
+        return {
+            "text": recommendation,
+            "recommendations": []
+        }
+    
+    # Handle recommendation from JSON with 'type' key
+    if isinstance(recommendation, dict):
+        # Check if it's a recommendation or has resources
+        if recommendation.get('type') == 'recommendation' or 'resources' in recommendation:
+            recommendations = []
+            for resource in recommendation.get('resources', []):
+                recommendations.append({
+                    "title": resource.get('title', 'Recommendation'),
+                    "description": f"Platform: {resource.get('platform', 'Not specified')} | Duration: {resource.get('duration', 'Not specified')}",
+                    "link": resource.get('link', ''),
+                    "category": resource.get('category', 'General'),
+                    "imageUrl": None  # Placeholder for potential image URLs
+                })
+            
+            return {
+                "text": recommendation.get('description', 'Here are some recommendations:'),
+                "recommendations": recommendations
+            }
+    
+    # Fallback to text response
+    return {
+        "text": str(recommendation),
+        "recommendations": []
+    }
+
+# Updated get_response function with prioritized matching and random response selection
+def get_response(user_input):
+    print(f"Processing input: {user_input}")  # Debug print
+    
+    # Step 1: Exact Match - Check for completely identical patterns
     for intent in intents:
-        for pattern in intent.get('patterns', []):  # Ensure 'patterns' key exists
-            if user_input.lower() in pattern.lower():  # Match the pattern (case-insensitive)
-                return intent['responses'][0]  # Return the first response for the matched pattern
-    return None
-
-# Function to get an exact match answer from CSV
-def get_answer_from_csv(user_input):
+        for pattern in intent.get('patterns', []):
+            if user_input.lower().strip() == pattern.lower().strip():
+                print(f"Found exact pattern match: {pattern}")
+                responses = intent.get('responses', [])
+                if responses:
+                    # Select a random response instead of always the first one
+                    response = random.choice(responses)
+                    return transform_recommendations(response)
+    
+    # Step 2: Exact Match from CSV
     for index, row in csv_data_1.iterrows():
-        if user_input.lower() in row['Questions'].lower():  # Match the question (case-insensitive)
-            return row['Answers']  # Return the answer from the CSV dataset
-    return None
-
-# Function to get the best-matched response from JSON using NLP
-def get_best_match_from_json(user_input):
+        if user_input.lower().strip() == row['Questions'].lower().strip():
+            return {"text": row['Answers'], "recommendations": []}
+    
+    # Step 3: NLP-based Semantic Matching from JSON
     user_embedding = model.encode(user_input, convert_to_tensor=True)
     similarities = util.pytorch_cos_sim(user_embedding, json_embeddings)[0]
     best_match_idx = similarities.argmax().item()
     confidence = similarities[best_match_idx].item()
     
-    if confidence > 0.7:  # Only return if confidence is above a threshold
-        return json_responses[best_match_idx]
-    return None
-
-# Function to get the best-matched answer from CSV using NLP
-def get_best_match_from_csv(user_input):
-    user_embedding = model.encode(user_input, convert_to_tensor=True)
-    similarities = util.pytorch_cos_sim(user_embedding, csv_embeddings)[0]
-    best_match_idx = similarities.argmax().item()
-    confidence = similarities[best_match_idx].item()
+    print(f"Best JSON semantic match confidence: {confidence}")
     
-    if confidence > 0.7:  # Only return if confidence is above a threshold
-        return csv_data_1.iloc[best_match_idx]['Answers']
-    return None
-
-# Main function to get a response
-def get_response(user_input):
-    # Try exact match first
-    response = get_response_from_json(user_input)
-    if response:
-        return response
-
-    response = get_answer_from_csv(user_input)
-    if response:
-        return response
+    if confidence > 0.6:  # Adjusted threshold for semantic matching
+        matched_pattern = json_patterns[best_match_idx]
+        for intent in intents:
+            if matched_pattern in intent.get('patterns', []):
+                responses = intent.get('responses', [])
+                if responses:
+                    print(f"Found semantic JSON match: {matched_pattern}")
+                    # Select a random response
+                    response = random.choice(responses)
+                    return transform_recommendations(response)
     
-    # Try NLP-based matching if exact match fails
-    response = get_best_match_from_json(user_input)
-    if response:
-        return response
-
-    response = get_best_match_from_csv(user_input)
-    if response:
-        return response
+    # Step 4: NLP-based Semantic Matching from CSV
+    csv_similarities = util.pytorch_cos_sim(user_embedding, csv_embeddings)[0]
+    best_csv_match_idx = csv_similarities.argmax().item()
+    csv_confidence = csv_similarities[best_csv_match_idx].item()
     
-    return "Sorry, I didn't understand that."
+    if csv_confidence > 0.7:
+        response = csv_data_1.iloc[best_csv_match_idx]['Answers']
+        return {"text": response, "recommendations": []}
+    
+    # Fallback response
+    return {"text": "Sorry, I didn't understand that. Could you rephrase?", "recommendations": []}
 
 # Route for the chatbot
-@app.route('/get-response', methods=['POST'])
+@app.route('/api/chat', methods=['POST'])
 def get_bot_response():
-    user_input = request.json['input']
+    user_input = request.json['message']
     print(f"Received input: {user_input}")  # Debugging statement
+    
     response = get_response(user_input)
-    return jsonify({'response': response})
+    
+    # Ensure we always return a valid JSON response
+    print(f"Sending response: {response}")  # Debug print
+    return jsonify(response)
 
 # Route for getting a doctor's profile
 @app.route('/doctors/<int:doctor_id>', methods=['GET'])

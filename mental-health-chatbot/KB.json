@@ -27,13 +27,10 @@
                 "Great to see you. How do you feel currently?",
                 "Hello there. Glad to see you're back. What's going on in your world right now?",
                 "Namaste. How are you doing today?",
-                "Salut! How can I assist you today?",
-                "Ciao! What's on your mind?",
-                "Sawubona! How's your day going?",
+                
                 "Hola! How can I help you today?",
                 "Bonjour! What can I do for you?",
-                "Konnichiwa! How are you feeling?",
-                "Guten tag! What brings you here?",
+    
                 "Ola! How's everything going?",
                 "Hey! What's up?",
                 "Is anyone there? How can I assist you?",
@@ -326,11 +323,58 @@
             ]
         },
         {
-            "tag": "depression_help",
-            "patterns": ["Can you help with depression?"],
-            "responses": [
-                "Dr. Kavita Mehra specializes in general mental health care and is available to support you with anxiety, depression, and stress management. Contact her at +91-9876543210. Address: 123 Wellness Road, New Delhi. <a href='/doctor-profile/1' target='_blank'>View Dr. Mehra's Profile</a>"
-            ],
+
+                "tag": "depression_help",
+                "patterns": [
+                    "Can you help with depression?",
+                    "I think I'm depressed",
+                    "I feel sad all the time",
+                    "Nothing makes me happy anymore",
+                    "I've lost interest in things I used to enjoy",
+                    "I feel empty inside",
+                    "I can't get out of bed in the morning",
+                    "Everything feels hopeless",
+                    "I'm feeling really low",
+                    "I don't see the point in anything",
+                    "Why am I always sad?",
+                    "I feel worthless",
+                    "I have no energy for anything",
+                    "What are signs of depression?",
+                    "How do I know if I'm depressed?",
+                    "I'm having dark thoughts",
+                    "I feel numb to everything",
+                    "I can't stop crying",
+                    "I'm not enjoying life anymore",
+                    "I've been feeling down for weeks",
+                    "I don't care about anything",
+                    "I feel like a burden to everyone",
+                    "I can't concentrate on anything",
+                    "I'm sleeping too much",
+                    "I can't sleep at all",
+                    "I've lost my appetite",
+                    "I'm eating too much lately",
+                    "What can I do about depression?",
+                    "How do people recover from depression?"
+                ],
+                "responses": [
+                    "Hi there, I'm here to listen and help. It takes courage to talk about depression, and I'm glad you reached out. Depression can feel like a heavy weight that's hard to carry alone. Small steps like getting outside for 10 minutes daily can help - sunlight actually boosts serotonin in your brain. Try setting just one tiny goal each day. Dr. Kavita Mehra specializes in depression care and can help create a recovery plan. Contact her at +91-9876543210 in New Delhi.",
+                    
+                    "Thank you for sharing how you're feeling with me. What you're experiencing is real and valid. Depression affects our brain chemistry - it's not just 'feeling sad' or something you can snap out of. Try the 3-3-3 method when feeling overwhelmed: name 3 things you see, 3 sounds you hear, and move 3 parts of your body. This helps ground you in the present moment.",
+                    
+                    "I'm so glad you're reaching out - talking about these feelings is an important first step. Depression often lies to us about our worth and future. One helpful practice is writing down one thing you're grateful for each day, even something tiny like 'warm tea.' This gradually helps retrain your brain to notice positive things again. For professional support, Dr. Rajiv Nair in Mumbai (+91-9123456789) specializes in depression treatment.",
+                    
+                    "Welcome, and thank you for trusting me with how you're feeling. Many people find that depression causes changes in sleep, appetite, and energy. Creating a consistent daily routine can provide structure when everything feels challenging. Even simple things like drinking water, eating something nutritious, and moving your body a little can make a difference in how you feel physically.",
+                    
+                    "I appreciate you sharing this with me today. It's really important that you're recognizing these feelings. Sometimes depression makes even basic self-care feel impossible. If brushing teeth and showering seem overwhelming, try the 'five-minute rule' - commit to just five minutes of an activity, knowing you can stop after. Remember that healing isn't linear - having bad days doesn't mean you're not making progress.",
+                    
+                    "I'm here for you, and I'm listening. It takes strength to talk about depression, so I want to acknowledge that. Depression can make your thoughts very negative and self-critical. When you notice harsh thoughts about yourself, try asking: 'Would I say this to a friend who was struggling?' Be as kind to yourself as you would be to someone you care about. If you need professional support, Dr. Neha Khanna in Bengaluru (+91-9988776655) provides compassionate depression care.",
+                    
+                    "Hello there. First of all, you're not alone in what you're feeling. Depression affects millions of people worldwide, and reaching out like this shows real courage. Let's talk about what you're experiencing and explore some ways that might help you feel better, even if just a little bit at first. Small steps can lead to big changes over time.",
+                    
+                    "Hi, I want you to know that I'm here to support you without judgment. Depression can make us feel isolated, but you don't have to face this alone. There are many paths forward, whether it's self-care techniques, professional help, or a combination. Would you like to tell me more about what you've been experiencing?",
+                    
+                    "Welcome. I'm really glad you reached out about how you're feeling. Depression is like walking through quicksand - everything feels harder than it should. But there are ways to make the journey a bit easier. Let's start with understanding what you're going through and find some strategies that might work specifically for you."
+                ],
             "doctor_profiles": [
                 {
                     "id": 1,
@@ -8791,7 +8835,6 @@
                 "procrastination",
                 "pressure",
                 "expectations",
-                "self-care",
                 "relaxation",
                 "positive thinking",
                 "mindfulness",
@@ -8871,7 +8914,6 @@
                 "positivity",
                 "optimism",
                 "mindfulness",
-                "self-care",
                 "health",
                 "wellness",
                 "balance",
@@ -12937,10 +12979,10 @@
                 "I am having trouble coping with stress"
             ],
             "responses": [
-                "Dr. Kavita Mehra specializes in general mental health care and is available to suppor0t you with anxiety, depression, and stress management. Contact her at +91-9876543210. Address: 123 Wellness Road, New Delhi.",
-                "Try some relaxation techniques or listen to this music: https://youtube.com",
-                "It sounds like you're going through a tough time. Dr. Rajiv Nair can help you manage stress and anxiety. Reach him at +91-9123456789. Address: 45 Peace Ave, Mumbai.",
-                "Dr. Neha Khanna can provide you with techniques for managing depression and stress. You can contact her at +91-9988776655. Address: 88 Calm Lane, Bengaluru."
+                "I hear you - anxiety can be really tough. Have you tried deep breathing? Breathe in for 4 counts, hold for 2, and exhale for 6. Doing this for just 2 minutes can help calm your nervous system. Another quick technique is placing your hand on your heart and focusing on its steady rhythm.",
+                "It's okay to not feel okay sometimes. Try stepping outside for a 10-minute walk - sunlight and movement can naturally boost your mood. For ongoing support, Dr. Rajiv Nair helps many people manage difficult emotions. You can reach him at +91-9123456789, Peace Ave, Mumbai.",
+                "Feeling overwhelmed is a signal that you need some care. Try the 5-4-3-2-1 technique: name 5 things you see, 4 things you can touch, 3 things you hear, 2 things you smell, and 1 thing you taste. This helps ground you in the present moment when stress feels too much.",
+                "You're not alone in how you're feeling. Many people go through periods of depression. One step that helps is creating a small self-care routine - even something as basic as drinking enough water and getting 15 minutes of sunlight daily. If you need professional help, Dr. Neha Khanna in Bengaluru (+91-9988776655) specializes in depression support."
             ]
         },
         {
@@ -12954,9 +12996,9 @@
                 "Do you have anyone who can help with ADHD?"
             ],
             "responses": [
-                "Dr. Suresh Patel specializes in child and adolescent psychiatry and can assist with behavioral issues and ADHD. Contact him at +91-9234567890. Address: 112 Youth Road, Chennai.",
-                "Dr. Priya Malhotra works with adolescents experiencing mood and behavioral challenges. You can reach her at +91-9321765432. Address: 78 Growth Street, Pune.",
-                "Dr. Anjali Deshmukh is experienced in helping young people with ADHD and adolescent depression. Call her at +91-9023456781. Address: 55 Bright Minds Ave, Hyderabad."
+                "Watching your child struggle can be really tough. Try creating a distraction-free study space with good lighting and regular 5-minute breaks. For many kids, breaking tasks into 20-minute chunks works wonders. If they're using colored highlighters or sticky notes to organize information, that can help visual learners too.",
+                "Teen depression often shows up differently than in adults - increased irritability, changes in sleep, or dropping activities they used to enjoy are common signs. Try maintaining open communication without pressure. Dr. Priya Malhotra at 78 Growth Street, Pune (+91-9321765432) has excellent experience supporting teens if you need professional guidance.",
+                "For children with focus challenges, a consistent routine can make a big difference. Visual schedules and timers often help, along with regular physical activity. Even 15 minutes of movement before study time can improve focus dramatically. Dr. Anjali Deshmukh specializes in ADHD support if you need additional help (+91-9023456781)."
             ]
         },
         {
@@ -12970,9 +13012,9 @@
                 "How can I stop using drugs?"
             ],
             "responses": [
-                "Dr. Rohan Shetty specializes in addiction psychiatry and can help with substance abuse and alcohol addiction. Reach him at +91-9012345678. Address: 33 Recovery Rd, Bengaluru.",
-                "For help with addiction, Dr. Meena Jain offers specialized care for alcohol and drug dependency. Contact her at +91-9988771122. Address: 67 Renewal Path, Ahmedabad.",
-                "Dr. Vikram Verma is experienced in addiction management and can assist with quitting smoking and other dependencies. Call him at +91-9123456710. Address: 22 Freedom Lane, Kolkata."
+                "Recognizing you might have an issue with substances takes real courage. Try tracking your triggers in a simple journal to understand your patterns better. Remember that small steps matter - even one day without is progress. For structured support, Dr. Rohan Shetty (+91-9012345678) provides compassionate addiction care.",
+                "Quitting is tough but absolutely possible. Many find the 'delay, distract, drink water' approach helpful for cravings - postpone for 10 minutes, do something engaging, and stay hydrated. Consider joining a local support group where others understand what you're going through. The Quit It app also offers free daily motivation and tracking.",
+                "You don't have to face addiction alone. Small changes like changing routes to avoid triggers, deleting contact numbers, and developing a support network can make a difference. Try the 'urge surfing' technique - acknowledge cravings will rise and fall like waves, and you can ride them out without acting on them."
             ]
         },
         {
@@ -12986,9 +13028,9 @@
                 "I think I have PTSD symptoms"
             ],
             "responses": [
-                "Dr. Alka Menon specializes in trauma and PTSD support. You can contact her at +91-9123456780. Address: 101 Resilience Blvd, Jaipur.",
-                "For trauma and PTSD, Dr. Karan Desai offers therapy and support. Call him at +91-9876543211. Address: 49 Healing Path, Lucknow.",
-                "Dr. Sunita Ghosh provides counseling for PTSD and trauma recovery. Reach her at +91-9234567899. Address: 20 Strength Ave, Chandigarh."
+                "Trauma affects everyone differently, and healing happens on your own timeline. Grounding techniques like holding an ice cube or focusing on textures around you can help during flashbacks. When you feel triggered, try naming 5 objects you can see to bring yourself back to the present moment.",
+                "When trauma memories surface, remind yourself 'I am safe now, this is just a memory.' Practicing self-compassion is essential - you survived something difficult and deserve kindness. For specialized trauma therapy approaches like EMDR, Dr. Karan Desai in Lucknow (+91-9876543211) has helped many people process difficult experiences.",
+                "PTSD symptoms like hypervigilance, nightmares, or feeling on edge are your nervous system's way of trying to keep you safe. The free 'PTSD Coach' app offers helpful tools for managing symptoms in the moment. Box breathing (inhale for 4, hold for 4, exhale for 4, hold for 4) can help regulate your nervous system when you feel triggered."
             ]
         },
         {
@@ -13002,9 +13044,9 @@
                 "We are facing issues as a couple"
             ],
             "responses": [
-                "Dr. Ravi Kapoor specializes in family and couples therapy, offering support for relationship issues. Contact him at +91-9012345671. Address: 28 Harmony St, Gurgaon.",
-                "Dr. Meera Joshi can provide marriage counseling and family therapy. Call her at +91-9988776654. Address: 15 Unity Lane, Pune.",
-                "For couples therapy, Dr. Anil Sharma is available to help strengthen your relationship. Contact him at +91-9321765489. Address: 12 Peaceful Rd, Thane."
+                "Relationship challenges are normal, even in the strongest partnerships. Try setting aside 20 minutes daily for distraction-free connection - no phones, just conversation or shared activity. The book 'The 5 Love Languages' has helped many couples understand each other better. For deeper issues, Dr. Ravi Kapoor (+91-9012345671) specializes in couples counseling.",
+                "In difficult moments, try the pause technique - take 20 minutes apart when tensions rise, then return to the conversation with a calmer perspective. Another approach is taking turns speaking for 2 minutes without interruption, then reflecting back what you heard before responding. This simple listening exercise can transform communication.",
+                "Family dynamics are complex, and sometimes new approaches help. Try a weekly family meeting where everyone gets uninterrupted time to express feelings without judgment. Using 'I feel' statements instead of blame can make a big difference. If you'd like professional support, Dr. Anil Sharma specializes in family therapy at 12 Peaceful Rd, Thane (+91-9321765489)."
             ]
         },
         {
@@ -13017,9 +13059,9 @@
                 "Do you have someone for anger control?"
             ],
             "responses": [
-                "Dr. Tanya Rao specializes in anger management therapy and can help with techniques for controlling anger. Contact her at +91-9234567123. Address: 47 Calm Ave, Mumbai.",
-                "Dr. Rakesh Singh offers anger management support to improve behavioral control. Reach him at +91-9321456780. Address: 5 Serenity Street, Delhi.",
-                "Dr. Jyoti Agrawal can assist with anger management counseling. Contact her at +91-9876543278. Address: 29 Balance Rd, Coimbatore."
+                "When you feel anger building, try the STOP method: Stop what you're doing, Take a breath, Observe what you're feeling in your body, and Proceed mindfully. Walking away for a 10-minute cooldown period can prevent words you might regret. Splashing cold water on your face can also help reset your nervous system.",
+                "Anger often masks deeper emotions like hurt or fear. Next time you're angry, ask yourself 'What am I really feeling underneath this?' Try releasing physical tension through exercise - even a quick set of jumping jacks can help burn off the adrenaline. Dr. Rakesh Singh provides effective anger management strategies if you need ongoing support (+91-9321456780).",
+                "Many people struggle with anger - you're not alone in this. A simple technique is counting slowly to 10 before responding when triggered. Keeping an anger journal to identify patterns can reveal helpful insights. Progressive muscle relaxation (tensing and releasing muscle groups) can help manage the physical symptoms of anger."
             ]
         },
         {
@@ -13040,7 +13082,7 @@
                 "I feel mentally exhausted from studying all the time",
                 "I'm scared I will fail my exams",
                 "What if I can't pass my tests?",
-                "I feel like I’m not good enough to succeed",
+                "I feel like I'm not good enough to succeed",
                 "I have a fear of failing my exams",
                 "I have too much to study and don't know where to start",
                 "The amount of syllabus is making me feel overwhelmed",
@@ -13050,7 +13092,7 @@
                 "I get headaches and can't sleep before exams",
                 "My heart races every time I try to study for exams",
                 "I feel tired all the time from exam stress",
-                "I don’t have enough time to study everything",
+                "I don't have enough time to study everything",
                 "How do I manage my time better for exams?",
                 "I keep procrastinating and now I'm behind",
                 "I feel stressed because I can't organize my study time",
@@ -13061,24 +13103,25 @@
                 "Everyone expects me to do well, and it's stressful",
                 "My parents have high expectations for my grades",
                 "I feel pressured by my friends who seem to be doing better",
-                "I don’t want to disappoint my family with my exam results",
+                "I don't want to disappoint my family with my exam results",
                 "I feel I have to get perfect grades",
                 "I'm stressed because I always aim for 100%",
                 "I feel anxious whenever I make a small mistake while studying",
-                "I can’t stop worrying about getting the highest score",
+                "I can't stop worrying about getting the highest score",
                 "I feel completely burned out from studying",
                 "I have no energy left to keep preparing",
                 "How do I avoid burnout from studying too much?",
-                "I’m too tired to keep up with my study routine",
+                "I'm too tired to keep up with my study routine",
                 "I keep forgetting things I've studied",
                 "How can I improve my memory for exams?"
             ],
             "responses": [
-                "Dr. Ashwini Sinha specializes in stress management for students and can guide you through techniques to handle academic pressure. You can contact her at +91-9123456712. Address: 12 Scholar's Lane, Kota.",
-                "It sounds like you're experiencing exam stress. Dr. Vikram Chatterjee is available to help students manage study-related anxiety. Reach him at +91-9234567894. Address: 77 Focus Road, Pune.",
-                "For help with academic stress, Dr. Pooja Mehta offers support and strategies to improve concentration and manage test anxiety. Contact her at +91-9876543289. Address: 35 Study Haven, Hyderabad."
+                "Exam stress is totally normal! Try the Pomodoro technique - study intensely for 25 minutes, then take a 5-minute break. This helps maintain focus without burning out. Also, teaching concepts aloud (even to an empty room) improves retention by 90%. If anxiety persists, Dr. Ashwini Sinha (+91-9123456712) specializes in student stress management.",
+                "When you're overwhelmed with syllabus, break it down! Create a one-page mind map for each subject showing main concepts and connections. Our brains remember visual patterns better than walls of text. Also try studying in different locations - research shows changing your environment improves memory by up to 40%.",
+                "Memory hack: review material right before sleep - your brain processes information during rest. For focus, try background sounds like 'brown noise' (available free on YouTube) which many students find helps concentration. And remember - perfectionism often backfires! Aiming for understanding beats memorization every time.",
+                "Feeling unmotivated? Set a timer for just 5 minutes of study - once you start, continuing gets easier (it's called the Zeigarnik effect). Also, reward yourself after study blocks with something you enjoy. Remember that stress actually improves performance - up to a point! It's your body getting ready for a challenge."
             ]
-    },
+        },
     {
   
     "tag": "suicidal_thoughts",
@@ -13110,30 +13153,543 @@
     ] 
 },
 {
-    "tag": "suggest-music",
-    "patterns": [
-      "Can you suggest some relaxing music?",
-      "I need some calming songs.",
-      "Play something soothing.",
-      "Give me a playlist for relaxation."
-    ],
-    "responses": [
-      "Here are some relaxing music recommendations:\n\n<ul>\n  <li><a href='https://www.youtube.com/watch?v=2OEL4P1Rz04' target='_blank'rel='noopener noreferrer'> Peaceful Piano</a></li>\n  <li><a href='https://www.youtube.com/watch?v=DWcJFNfaw9c' target='_blank'>Calm Nature Sounds</a></li>\n  <li><a href='https://www.youtube.com/watch?v=1ZYbU82GVz4' target='_blank'>Meditation Music</a></li>\n  <li><a href='https://www.youtube.com/watch?v=lFcSrYw-ARY' target='_blank'>Soft Instrumental</a></li>\n  <li><a href='https://www.youtube.com/watch?v=XMJ7JhXUbjI' target='_blank'>Relaxing Jazz</a></li>\n</ul>"
-    ]
-  },
-  {
-    "tag": "suggest-exercise",
-    "patterns": [
-      "Suggest some exercises for relaxation",
-      "I need workouts to reduce stress",
-      "What are some physical activities for mental well-being?",
-      "Recommend exercises to feel better",
-      "Any workouts to help with anxiety?"
-    ],
-    "responses": [
-      "Here are some effective exercises for relaxation and mental well-being:\n\n<ul>\n  <li><a href='https://www.youtube.com/watch?v=inpok4MKVLM' target='_blank'> 10-Minute Yoga for Stress Relief</a></li>\n  <li><a href='https://www.youtube.com/watch?v=UItWltVZZmE' target='_blank' Cardio Workout to Boost Mood</a></li>\n  <li><a href='https://www.youtube.com/watch?v=oBu-pQG6sTY' target='_blank'>Meditation and Stretching Routine</a></li>\n  <li><a href='https://www.youtube.com/watch?v=j7rKKpwdXNE' target='_blank'>Simple Home Exercises for Mental Well-Being</a></li>\n  <li><a href='https://www.youtube.com/watch?v=ZToicYcHIOU' target='_blank'>Bedtime Yoga for Better Sleep</a></li>\n</ul>\n\nTry these exercises to refresh your mind and body! "
-    ]
-  },
+        "tag": "suggest-music",
+        "patterns": [
+            "Can you suggest some relaxing music?", 
+            "I need some calming songs.",
+            "Play something soothing.", 
+            "Give me a playlist for relaxation."
+        ],
+        "responses": [
+            {
+                "type": "recommendation",
+                "title": "Relaxing Music Recommendations",
+                "description": "Here are some soothing music tracks to help you unwind and destress.",
+                "resources": [
+                    {
+                        "id": 1,
+                        "title": "Peaceful Piano",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=2OEL4P1Rz04",
+                        "duration": "1 hour"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Calm Nature Sounds",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=DWcJFNfaw9c",
+                        "duration": "2 hours"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Meditation Music",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=1ZYbU82GVz4",
+                        "duration": "45 minutes"
+                    },
+                    {
+                        "id": 4,
+                        "title": "Soft Instrumental",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=lFcSrYw-ARY",
+                        "duration": "1 hour"
+                    },
+                    {
+                        "id": 5,
+                        "title": "Relaxing Jazz",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=XMJ7JhXUbjI",
+                        "duration": "1.5 hours"
+                    }
+                ],
+                "additional_links": [
+                    {
+                        "title": "Relaxation Music Playlist",
+                        "link": "https://open.spotify.com/playlist/37i9dQZF1DX4sWSpwq3LiO"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tag": "suggest-exercise",
+        "patterns": [
+            "Suggest some exercises for relaxation",
+            "I need workouts to reduce stress",
+            "What are some physical activities for mental well-being?",
+            "Recommend exercises to feel better",
+            "Any workouts to help with anxiety?"
+        ],
+        "responses": [
+            {
+                "type": "recommendation",
+                "title": "Stress Relief Exercise Routines",
+                "description": "Here are effective exercises for relaxation and mental well-being.",
+                "resources": [
+                    {
+                        "id": 1,
+                        "title": "10-Minute Yoga for Stress Relief",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=inpok4MKVLM",
+                        "duration": "10 minutes"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Cardio Workout to Boost Mood",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=UItWltVZZmE",
+                        "duration": "20 minutes"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Meditation and Stretching Routine",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=oBu-pQG6sTY",
+                        "duration": "15 minutes"
+                    },
+                    {
+                        "id": 4,
+                        "title": "Simple Home Exercises for Mental Well-Being",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=j7rKKpwdXNE",
+                        "duration": "25 minutes"
+                    },
+                    {
+                        "id": 5,
+                        "title": "Bedtime Yoga for Better Sleep",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=ZToicYcHIOU",
+                        "duration": "30 minutes"
+                    }
+                ],
+                "additional_links": [
+                    {
+                        "title": "Home Workout Guide",
+                        "link": "https://www.fitnessblender.com/videos"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tag": "suggest-mental-health-books",
+        "patterns": [
+            "Can you recommend books for mental health?",
+            "Books to help with anxiety and depression",
+            "Self-help books for personal growth",
+            "What should I read to improve my mental well-being?",
+            "Books about overcoming mental health challenges"
+        ],
+        "responses": [
+            {
+                "type": "recommendation",
+                "title": "Mental Health and Self-Improvement Book Recommendations",
+                "description": "Curated list of books that offer insights, coping strategies, and personal growth techniques.",
+                "resources": [
+                    {
+                        "id": 1,
+                        "title": "The Body Keeps the Score",
+                        "author": "Bessel van der Kolk",
+                        "genre": "Trauma and Healing",
+                        "description": "A groundbreaking book on understanding trauma and its impact on mind and body",
+                        "recommendation_reason": "Provides deep insights into trauma, healing, and mental health recovery",
+                        "link": "https://www.goodreads.com/book/show/18693771-the-body-keeps-the-score"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Atomic Habits",
+                        "author": "James Clear",
+                        "genre": "Personal Development",
+                        "description": "Practical strategies for building good habits and breaking bad ones",
+                        "recommendation_reason": "Helps in creating positive mental health routines and personal growth",
+                        "link": "https://www.goodreads.com/book/show/40121378-atomic-habits"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Mind Over Mood",
+                        "author": "Dennis Greenberger and Aaron T. Beck",
+                        "genre": "Cognitive Behavioral Therapy",
+                        "description": "A guide to managing mood and changing negative thought patterns",
+                        "recommendation_reason": "Offers practical techniques for managing depression and anxiety",
+                        "link": "https://www.goodreads.com/book/show/108380.Mind_Over_Mood"
+                    },
+                    {
+                        "id": 4,
+                        "title": "Self-Compassion",
+                        "author": "Kristin Neff",
+                        "genre": "Emotional Well-being",
+                        "description": "Explores the power of self-compassion in mental health and personal growth",
+                        "recommendation_reason": "Teaches strategies for being kind to yourself and managing self-criticism",
+                        "link": "https://www.goodreads.com/book/show/10127904-self-compassion"
+                    },
+                    {
+                        "id": 5,
+                        "title": "Daring Greatly",
+                        "author": "Brené Brown",
+                        "genre": "Vulnerability and Courage",
+                        "description": "Insights on vulnerability, courage, and emotional resilience",
+                        "recommendation_reason": "Helps in understanding and embracing emotional vulnerability",
+                        "link": "https://www.goodreads.com/book/show/13588356-daring-greatly"
+                    }
+                ],
+                "additional_links": [
+                    {
+                        "title": "Mental Health Book Club",
+                        "link": "https://www.goodreads.com/group/show/574299-mental-health-book-club"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tag": "suggest-mental-health-nutrition",
+        "patterns": [
+            "suggest some diet plan",
+            "What diet helps mental health?",
+            "Foods that improve mood and mental well-being",
+            "Nutrition tips for better mental health",
+            "Diet recommendations for anxiety and depression",
+            "How can food affect my mental state?"
+        ],
+        "responses": [
+            {
+                "type": "recommendation",
+                "title": "Nutrition Guide for Mental Health",
+                "description": "Comprehensive nutrition advice to support mental well-being and emotional balance.",
+                "resources": [
+                    {
+                        "id": 1,
+                        "title": "Nutrition and Brain Health",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=xyQY8a-ng6g",
+                        "duration": "18 minutes"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Foods That Help Combat Depression",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=j8eTF8CxYQc",
+                        "duration": "12 minutes"
+                    },
+                    {
+                        "id": 3,
+                        "title": "The Gut-Brain Connection",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=b4CBy0uVqRc",
+                        "duration": "15 minutes"
+                    },
+                    {
+                        "id": 4,
+                        "title": "Anti-Inflammatory Diet for Mental Health",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=5DTFNHo3LV0",
+                        "duration": "22 minutes"
+                    },
+                    {
+                        "id": 5,
+                        "title": "Meal Prep for Mental Wellbeing",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=DCsJ8dMeeQ4",
+                        "duration": "25 minutes"
+                    }
+                ],
+                "key_nutrients": [
+                    {
+                        "name": "Omega-3 Fatty Acids",
+                        "benefits": [
+                            "Reduces inflammation",
+                            "Supports brain health",
+                            "May help with depression symptoms"
+                        ],
+                        "food_sources": [
+                            "Fatty fish (salmon, mackerel)",
+                            "Chia seeds",
+                            "Walnuts",
+                            "Flaxseeds"
+                        ]
+                    },
+                    {
+                        "name": "Probiotics",
+                        "benefits": [
+                            "Supports gut-brain connection",
+                            "May reduce anxiety and stress",
+                            "Improves overall mood"
+                        ],
+                        "food_sources": [
+                            "Yogurt",
+                            "Kefir",
+                            "Sauerkraut",
+                            "Kimchi"
+                        ]
+                    },
+                    {
+                        "name": "Antioxidant-Rich Foods",
+                        "benefits": [
+                            "Reduces oxidative stress",
+                            "Supports brain function",
+                            "Helps combat depression"
+                        ],
+                        "food_sources": [
+                            "Berries",
+                            "Dark chocolate",
+                            "Green leafy vegetables",
+                            "Green tea"
+                        ]
+                    }
+                ],
+                "additional_links": [
+                    {
+                        "title": "Mental Health Nutrition Guide",
+                        "link": "https://www.mentalhealthamerica.net/conditions/healthy-diet-eating-mental-health-mind"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tag": "suggest-coping-strategies",
+        "patterns": [
+            "How can I manage my anxiety?",
+            "What are some coping mechanisms for stress?",
+            "I'm feeling overwhelmed. What can I do?",
+            "Help me deal with negative thoughts",
+            "Strategies for emotional regulation"
+        ],
+        "responses": [
+            {
+                "type": "recommendation",
+                "title": "Effective Coping Strategies",
+                "description": "Practical techniques to help manage stress, anxiety, and emotional challenges.",
+                "resources": [
+                    {
+                        "id": 1,
+                        "title": "5-Minute Grounding Technique",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=30VMIEmA114",
+                        "duration": "5 minutes"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Cognitive Reframing Workshop",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=TnUJTVCJb0U",
+                        "duration": "15 minutes"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Breathing Exercises for Anxiety",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=odADwWzHR24",
+                        "duration": "10 minutes"
+                    },
+                    {
+                        "id": 4,
+                        "title": "Progressive Muscle Relaxation",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=86HUcX8ZtAk",
+                        "duration": "12 minutes"
+                    },
+                    {
+                        "id": 5,
+                        "title": "Managing Negative Thoughts",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=_XLY_XXBQWE",
+                        "duration": "18 minutes"
+                    }
+                ],
+                "additional_links": [
+                    {
+                        "title": "Mental Health Coping Guide",
+                        "link": "https://www.mind.org.uk/information-support/types-of-mental-health-problems/stress/dealing-with-pressure/"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tag": "suggest-self-care",
+        "patterns": [
+            "How can I take care of my mental health?",
+            "Self-care tips",
+            "Ways to improve my emotional well-being",
+            "What should I do to reduce stress?",
+            "Mental health self-care routine"
+        ],
+        "responses": [
+            {
+                "type": "recommendation",
+                "title": "Comprehensive Self-Care Guide",
+                "description": "Holistic approaches to nurturing your mental and emotional health.",
+                "resources": [
+                    {
+                        "id": 1,
+                        "title": "Daily Self-Care Routine",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=w0iVTQS8ftg",
+                        "duration": "20 minutes"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Journaling for Emotional Healing",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=q8LaT5Iiwo4",
+                        "duration": "15 minutes"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Creating Healthy Boundaries",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=KhW4g9urdXQ",
+                        "duration": "25 minutes"
+                    },
+                    {
+                        "id": 4,
+                        "title": "Creating a Self-Care Toolbox",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=yZIPyHYGCPk",
+                        "duration": "12 minutes"
+                    },
+                    {
+                        "id": 5,
+                        "title": "Nature Therapy for Mental Health",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=TdDioDtjkis",
+                        "duration": "18 minutes"
+                    }
+                ],
+                "additional_links": [
+                    {
+                        "title": "Self-Care Resource Center",
+                        "link": "https://www.psychologytoday.com/us/blog/click-here-happiness/201812/self-care-12-ways-take-better-care-yourself"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tag": "suggest-professional-help",
+        "patterns": [
+            "When should I seek professional help?",
+            "How do I know if I need therapy?",
+            "Mental health resources",
+            "Finding a therapist",
+            "Support for mental health issues"
+        ],
+        "responses": [
+            {
+                "type": "recommendation",
+                "title": "Mental Health Professional Support",
+                "description": "Guidance on seeking professional mental health support and resources.",
+                "resources": [
+                    {
+                        "id": 1,
+                        "title": "Signs You Might Need Therapy",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=KSClXw0Wj1I",
+                        "duration": "15 minutes"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Choosing the Right Therapist",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=9FiVVAOXiEQ",
+                        "duration": "20 minutes"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Understanding Different Therapy Types",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=km-Xc9mIKGM",
+                        "duration": "25 minutes"
+                    },
+                    {
+                        "id": 4,
+                        "title": "What to Expect in Your First Therapy Session",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=KaYHNIXt6M0",
+                        "duration": "18 minutes"
+                    },
+                    {
+                        "id": 5,
+                        "title": "Affordable Mental Health Resources",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=Evt-S7zw-OM",
+                        "duration": "22 minutes"
+                    }
+                ],
+                "additional_links": [
+                    {
+                        "title": "Mental Health Professional Finder",
+                        "link": "https://www.psychologytoday.com/us/therapists"
+                    },
+                    {
+                        "title": "Crisis Support Hotlines",
+                        "link": "https://www.nami.org/help"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tag": "suggest-positive-mindset",
+        "patterns": [
+            "How can I develop a positive mindset?",
+            "Tips for staying optimistic",
+            "Overcoming negative thinking",
+            "Building mental resilience",
+            "Improving my emotional outlook"
+        ],
+        "responses": [
+            {
+                "type": "recommendation",
+                "title": "Cultivating Positive Mental Attitudes",
+                "description": "Techniques and practices to develop a more positive and resilient mindset.",
+                "resources": [
+                    {
+                        "id": 1,
+                        "title": "Positive Thinking Techniques",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=qvG4zyO11xI",
+                        "duration": "20 minutes"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Gratitude Practices for Mental Health",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=WPPPFqsECz0",
+                        "duration": "15 minutes"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Building Emotional Resilience",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=1FDyiUEn8Vw",
+                        "duration": "25 minutes"
+                    },
+                    {
+                        "id": 4,
+                        "title": "The Science of Optimism",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=L_mrVFZOYuY",
+                        "duration": "17 minutes"
+                    },
+                    {
+                        "id": 5,
+                        "title": "Reframing Negative Thoughts",
+                        "platform": "YouTube",
+                        "link": "https://www.youtube.com/watch?v=Niy54VJWPFE",
+                        "duration": "16 minutes"
+                    }
+                ],
+                "additional_links": [
+                    {
+                        "title": "Positive Mindset Resource Guide",
+                        "link": "https://positivepsychology.com/positive-thinking/"
+                    }
+                ]
+            }
+        ]
+    },
     {
         "tag": "phone-overuse",
         "patterns": [
@@ -13147,11 +13703,11 @@
             "How do I stop checking my phone all the time?"
         ],
         "responses": [
-            "Consider setting app usage limits or using grayscale mode to make your phone less appealing.",
-            "Try keeping your phone away during meals and before bedtime.",
-            "Engage in offline hobbies like reading, exercising, or meditating.",
-            "Using 'Do Not Disturb' mode and disabling notifications can help you focus on the present moment.",
-            "Try setting specific times during the day when you check your phone instead of constant scrolling."
+            "I understand how challenging phone overuse can be in today's connected world. Try implementing the 'out of sight, out of mind' approach by keeping your phone in another room during focused work, meals, or before bedtime. This physical distance creates a barrier that makes mindless checking less automatic.",
+            "Consider using technology to manage technology: apps like Forest, Freedom, or your phone's built-in screen time controls can help you set limits. Use grayscale mode to make your screen less visually appealing, which research shows reduces the dopamine reward from checking your device.",
+            "Create designated 'phone-free zones' in your home (like the bedroom or dining area) and 'phone-free hours' in your day (first hour after waking, during meals, one hour before bed). Replace these times with activities you enjoy—reading, walking, chatting with loved ones—to rebuild habits that don't involve screens.",
+            "Try the '20-minute rule'—when you feel the urge to check your phone unnecessarily, tell yourself to wait just 20 minutes. Often, the urge will pass as your brain becomes engaged in something else. Over time, this helps retrain your attention span and reduces dependence.",
+            "Reflect on what specific needs your phone usage fulfills—entertainment, social connection, information, escape from boredom or anxiety? Once identified, find healthier alternatives: join a club instead of scrolling social media, call a friend instead of texting, or use a dedicated device like an e-reader instead of your phone."
         ]
     },
     {
@@ -13167,11 +13723,11 @@
             "I feel addicted to social media"
         ],
         "responses": [
-            "Try setting daily limits on social media apps to reduce usage gradually.",
-            "Unfollow accounts that make you feel negative and follow pages that inspire or educate you.",
-            "Consider taking a social media detox by deleting apps temporarily.",
-            "Replace social media time with activities like reading, exercising, or spending time with loved ones.",
-            "Remind yourself that social media is often a highlight reel, not real life."
+            "Social media platforms are intentionally designed to keep you engaged through variable reward mechanisms—similar to slot machines. Start by turning off all non-essential notifications and removing social media apps from your home screen. This creates friction that makes mindless checking harder while maintaining access when truly needed.",
+            "Consider conducting a personal social media audit: Track how you feel before and after using each platform for a week. This helps identify which platforms negatively impact your mood and when you're most vulnerable to excessive use. With this data, you can make informed decisions about which apps to limit or delete entirely.",
+            "Try implementing a gradual reduction strategy: First, delete social media apps from your phone but keep accounts accessible on your computer. Next, limit computer access to specific times of day. Finally, consider a 2-4 week complete detox to reset your relationship with these platforms. Many people report significantly reduced anxiety and improved focus after even short breaks.",
+            "Examine the specific content triggering negative emotions—unfollowing or muting accounts that cause comparison, anxiety, or negative self-talk can transform your feed into a more positive space. Replace celebrity or influencer accounts with those focusing on education, nature, art, or other content aligned with your values and aspirations.",
+            "Social media often replaces deeper connections with superficial ones. Try scheduling one in-person or phone conversation each week in place of messaging. Many find these authentic interactions more fulfilling than hours of scrolling. Additionally, join community groups, classes, or volunteer opportunities to build connections offline."
         ]
     },
     {
@@ -13187,11 +13743,11 @@
             "What should I eat for better focus?"
         ],
         "responses": [
-            "A balanced diet rich in omega-3 fatty acids, whole grains, and leafy greens can improve mood and brain function.",
-            "Reducing sugar and processed foods can help stabilize mood and energy levels.",
-            "Drinking plenty of water and staying hydrated is essential for mental clarity.",
-            "Foods rich in magnesium, such as nuts and seeds, can help with stress reduction.",
-            "Consuming probiotic-rich foods like yogurt and kimchi supports gut health, which is linked to mental well-being."
+            "The gut-brain connection is powerful—about 95% of your body's serotonin (a key mood regulator) is produced in your digestive tract. Focus on incorporating foods rich in omega-3 fatty acids like salmon, walnuts, and flaxseeds, which research links to reduced depression symptoms. Leafy greens provide folate, linked to serotonin production, while berries contain antioxidants that combat oxidative stress associated with anxiety and depression.",
+            "Consider adopting a Mediterranean-style diet, which research consistently associates with lower depression risk. This means emphasizing whole foods like vegetables, fruits, whole grains, legumes, nuts, olive oil, and moderate amounts of fish, while limiting processed foods, refined carbohydrates, and added sugars that can cause energy crashes and mood fluctuations.",
+            "The timing and consistency of meals significantly impacts mood stability. Eating regular meals helps maintain blood sugar levels, preventing irritability and fatigue. Start with a protein-rich breakfast within an hour of waking to set your neurotransmitters up for the day. Small, balanced meals every 3-4 hours can help maintain energy and mood throughout the day.",
+            "Hydration profoundly affects cognition and mood—even mild dehydration can impair concentration and increase feelings of anxiety. Aim for 8-10 cups of water daily, and consider tracking your intake for a week to establish your baseline. Herbal teas like chamomile, passionflower, or lemon balm can provide additional calming benefits without caffeine.",
+            "Fermented foods like yogurt, kefir, sauerkraut, and kimchi support gut health by providing beneficial probiotics. Research shows that a healthy gut microbiome correlates with reduced anxiety and depression symptoms. Try incorporating 1-2 servings of fermented foods daily, along with prebiotic-rich foods like garlic, onions, and asparagus that feed beneficial gut bacteria."
         ]
     },
     {
@@ -13207,11 +13763,11 @@
             "How to cope with workplace anxiety?"
         ],
         "responses": [
-            "Prioritize tasks using the Eisenhower Matrix: urgent vs. important.",
-            "Take short breaks to refresh your mind and prevent burnout.",
-            "Learn to say no to extra tasks when your plate is full.",
-            "Try deep breathing exercises to manage stress before meetings or deadlines.",
-            "Maintaining a work-life balance by setting boundaries can improve well-being."
+            "Work overwhelm often stems from unclear priorities. Try the Eisenhower Matrix: draw a square divided into four quadrants labeled 'Urgent & Important' (do now), 'Important but Not Urgent' (schedule time), 'Urgent but Not Important' (delegate), and 'Neither Urgent nor Important' (eliminate). Categorize all your tasks to gain clarity on what truly requires your attention versus what can wait or be delegated.",
+            "Implement strategic breaks using the Pomodoro Technique—work intensely for 25 minutes, then take a 5-minute break. After four cycles, take a longer 15-30 minute break. During these breaks, step away from screens, stretch, breathe deeply, or briefly go outside. This approach maintains productivity while preventing mental fatigue that leads to burnout.",
+            "Establish clear work boundaries by creating end-of-day rituals that signal to your brain that work time is over. This might include writing tomorrow's to-do list, clearing your desk, changing clothes, or taking a walk after work. Additionally, communicate your availability hours clearly to colleagues and don't respond to non-emergency work communications outside these hours.",
+            "Workplace stress often magnifies when we feel we lack control. Identify aspects of your work you can influence—perhaps your schedule, workflow, or environment—and make small adjustments. For elements beyond your control, practice acceptance strategies like reframing ('This is challenging but temporary') or perspective-taking ('Will this matter a year from now?').",
+            "If burnout symptoms persist (emotional exhaustion, cynicism, reduced performance), consider having a candid conversation with your supervisor about workload adjustments, deadline extensions, or resource allocation. Frame this as a productivity strategy rather than a personal weakness—research shows reasonable workloads actually increase overall output and innovation."
         ]
     },
     {
@@ -13227,11 +13783,11 @@
             "How to sleep faster and better?"
         ],
         "responses": [
-            "Try maintaining a consistent sleep schedule, even on weekends.",
-            "Avoid screens at least an hour before bedtime to improve sleep quality.",
-            "Practice relaxation techniques such as meditation or reading before bed.",
-            "Reduce caffeine intake in the evening to promote better sleep.",
-            "Create a comfortable sleeping environment with dim lighting and minimal noise."
+            "Your body's internal clock (circadian rhythm) thrives on consistency. Establish a regular sleep-wake schedule—even on weekends—to regulate your body's natural sleep hormone (melatonin) production. To reset a disrupted sleep schedule, adjust your bedtime gradually by 15-30 minutes earlier each night until you reach your target time, rather than attempting dramatic changes all at once.",
+            "Create a science-backed sleep environment: maintain a cool room temperature (65-68°F/18-20°C), block all sources of light with blackout curtains or an eye mask, minimize noise with earplugs or white noise, and invest in a comfortable mattress and pillows. Remove electronic devices and work materials to create a space solely dedicated to sleep and relaxation.",
+            "Develop a consistent 30-60 minute wind-down routine that signals to your brain that it's time to sleep. This might include gentle stretching, reading (from a physical book, not a screen), taking a warm bath, practicing progressive muscle relaxation, or listening to calming music. Avoid problem-solving, planning, or consuming stimulating content before bed.",
+            "Be strategic about substances that affect sleep: Limit caffeine after noon as it has a 6-hour half-life; avoid alcohol within 3 hours of bedtime as it disrupts REM sleep; finish large meals 2-3 hours before bed to prevent digestive discomfort; and stay hydrated throughout the day rather than drinking large amounts before bed to minimize nighttime bathroom trips.",
+            "If you've been lying awake for more than 20 minutes, get up and move to another room for a quiet, low-stimulation activity like reading or listening to calming music until you feel sleepy again. This prevents your brain from associating your bed with wakefulness and worry. Keep lights dim and avoid screens during these periods to maintain melatonin production."
         ]
     },
     {
@@ -13247,11 +13803,11 @@
             "How to stay present instead of worrying about the future?"
         ],
         "responses": [
-            "Try focusing on small daily actions instead of overwhelming long-term fears.",
-            "Mindfulness practices can help keep you grounded in the present moment.",
-            "Journaling your thoughts can help you process and release future-related anxieties.",
-            "Accept that uncertainty is a natural part of life and focus on what you can control.",
-            "Setting realistic short-term goals can make the future feel more manageable."
+            "Future anxiety often stems from feeling unprepared. Create a concrete 'preparation plan' addressing specific concerns—if you're worried about finances, establish an emergency fund; if career uncertainty troubles you, develop relevant skills or build your network. Taking proactive steps, even small ones, provides a sense of agency that significantly reduces anxiety about what's ahead.",
+            "Practice distinguishing between productive planning and unproductive worrying. Planning involves identifying specific steps toward goals or solutions, while worrying typically involves circular thinking without resolution. When caught in worry loops, ask yourself: 'What specific action can I take about this concern?' If there's no actionable step, redirect your attention to the present moment.",
+            "Use the 'Best Case/Worst Case/Most Likely Case' exercise when specific future scenarios cause anxiety. Write all three possibilities in detail, including how you'd cope with the worst outcome. This builds confidence in your resilience while often revealing that the most likely outcome falls well within your coping abilities, making uncertainty feel more manageable.",
+            "Anchor yourself in the present through sensory awareness practices: Notice five things you can see, four things you can touch, three things you can hear, two things you can smell, and one thing you can taste. This simple exercise interrupts anxiety by shifting your brain's focus from abstract future concerns to concrete present experiences.",
+            "Accept that uncertainty is inherent to human existence—no amount of planning can eliminate it completely. Practices like meditation, mindfulness, or acceptance-based therapies can help develop comfort with uncertainty. Start with just 5 minutes daily of sitting with uncertain thoughts without trying to resolve them, gradually building your capacity to peacefully coexist with the unknown."
         ]
     },
     {
@@ -13267,11 +13823,11 @@
             "Overthinking is exhausting"
         ],
         "responses": [
-            "Try shifting your focus to the present moment through mindfulness techniques.",
-            "Practice setting a 'worry time' during the day, so overthinking does not consume you.",
-            "Journaling can help clear repetitive thoughts from your mind.",
-            "Ask yourself, Will this matter in a year? to challenge overthinking habits.",
-            "Engage in an activity that requires focus, such as puzzles or exercise, to distract from overthinking."
+            "Overthinking often happens when our minds lack clear boundaries. Schedule a daily 'worry session'—15-20 minutes dedicated solely to analyzing concerns. When intrusive thoughts arise outside this time, acknowledge them and say, 'I'll think about this during my worry time.' This technique helps contain overthinking to a specific window rather than allowing it to infiltrate your entire day.",
+            "Challenge overthinking with a thought record: Draw three columns labeled 'Thought,' 'Evidence For,' and 'Evidence Against.' When caught in an overthinking spiral, document the thought and objectively list evidence supporting and contradicting it. This evidence-based approach activates your logical brain, counterbalancing emotional reasoning that fuels overthinking.",
+            "Physical activities requiring focused attention can break overthinking cycles by shifting your brain from abstract rumination to concrete sensory experience. Options include intense exercise, complex cooking recipes, puzzle-solving, gardening, or learning a musical instrument. When your mind and body must focus on the present task, there's less bandwidth available for overthinking.",
+            "Perfectionism and overthinking are closely linked—perfectionistic standards create endless loops of analysis. Practice 'satisficing' instead—intentionally making decisions that are 'good enough' rather than optimal. Start with low-stakes decisions like meal choices or entertainment options, then gradually apply this approach to more significant areas causing overthinking.",
+            "Overthinking often flourishes in isolation. Externalize your thoughts through conversation with a trusted friend or therapist who can offer perspective. Simply verbalizing thoughts can reduce their power, while hearing yourself speak them aloud often reveals their irrationality more clearly than when they're circulating in your mind. If you notice recurring overthinking patterns, cognitive-behavioral therapy has strong evidence for breaking these cycles."
         ]
     },
     {
@@ -13287,11 +13843,11 @@
             "I'm constantly stressed, what should I do?"
         ],
         "responses": [
-            "Deep breathing exercises like the 4-7-8 method can help calm your mind.",
-            "Engaging in physical activity, even a short walk, can reduce stress levels.",
-            "Listening to calming music or nature sounds can help relax your mind.",
-            "Practicing gratitude by writing down things you're thankful for can shift your focus.",
-            "Talking to a friend, therapist, or support group can help relieve stress."
+            "For immediate stress relief, try the physiological sigh take a deep breath through your nose, then take another breath before you've fully exhaled, filling your lungs completely. Then exhale slowly through your mouth. This breathing pattern, researched by neuroscientist Andrew Huberman, rapidly decreases carbon dioxide levels and activates the parasympathetic nervous system, reducing stress hormones within 1-3 minutes.",
+            "Incorporate brief mindfulness practices throughout your day rather than relegating stress management to lengthy sessions. Set reminders to take 60-second breaks every few hours: focus completely on your breathing, scan your body for tension and deliberately release it, or simply observe your surroundings with full attention. These micro-practices prevent stress accumulation and build your overall capacity for presence.",
+            "Physical movement is one of the most effective stress relievers—it metabolizes stress hormones like cortisol and adrenaline while releasing mood-enhancing endorphins. Even brief activity helps: try a 10-minute walk outside, 5 minutes of jumping jacks or dancing, or simple stretching. For ongoing stress, aim for 30 minutes of moderate exercise most days, choosing activities you genuinely enjoy.",
+            "Create environmental cues for relaxation by designating specific spaces or objects associated with calm. This might be a particular chair, a special tea cup, or a corner in your home. When stressed, deliberately move to this space or use this object while practicing relaxation techniques. Over time, these environmental triggers will automatically begin to elicit your relaxation response.",
+            "Chronic stress often reflects an imbalance between demands and resources. Conduct a stress inventory by listing all stressors in your life, then categorize them as 'changeable' or 'unchangeable.' For changeable stressors, develop specific action plans to address them directly. For unchangeable stressors, identify coping strategies and acceptance practices, while ensuring you have adequate support resources."
         ]
     },
     {
@@ -13307,13 +13863,424 @@
             "I feel unheard, what should I do?"
         ],
         "responses": [
-            "Writing in a journal can help you process and express emotions safely.",
-            "Practicing with small conversations can make it easier to express feelings over time.",
-            "Using 'I feel' statements can help communicate emotions clearly.",
-            "Finding a creative outlet like art or music can be a non-verbal way to express yourself.",
-            "Building self-confidence can make opening up to others feel less intimidating."
+            "Develop your emotional vocabulary by regularly checking in with yourself using an emotions wheel (easily found online). This tool helps you move beyond basic labels like 'good' or 'bad' to more nuanced descriptions like 'disappointed,' 'apprehensive,' or 'inspired.' Practice naming your emotional states privately first, which builds the neural pathways needed for expressing feelings to others later.",
+            "Start with written expression if verbal communication feels overwhelming. Write letters you don't send, journal entries, or even text messages you draft but don't immediately send. This allows you to process feelings without the pressure of immediate response. Once comfortable identifying and articulating emotions in writing, verbal expression often becomes easier.",
+            "Practice the 'sandwich method' for expressing difficult feelings: begin with something positive or a point of connection, then express your challenging emotion or need, and close with affirmation of the relationship or a constructive suggestion. For example: 'I value our friendship and your support (positive). I felt hurt when my accomplishment wasn't acknowledged (difficult feeling). I know you care, and recognition means a lot to me (affirmation/suggestion).'",
+            "Create safe spaces for gradually increasing emotional expression. Start with people who have consistently shown themselves to be supportive and non-judgmental. Begin by sharing smaller emotions or vulnerabilities before progressing to deeper disclosures. This stepwise approach builds confidence while developing your expressive skills in a relatively low-risk environment.",
+            "If fear of judgment prevents self-expression, practice 'emotional exposure exercises'—intentionally sharing small, low-risk feelings or opinions in various contexts (with friends, in online forums, etc.). Like any skill, emotional expression improves with practice. Each positive experience reconditions your expectation of negative outcomes, gradually reducing anxiety around self-expression."
         ]
-    }
+    },
+    {
+        "tag": "procrastination",
+        "patterns": [
+            "I always procrastinate",
+            "How to stop putting things off?",
+            "I can't get myself to start tasks",
+            "Why do I procrastinate so much?",
+            "How to overcome procrastination?",
+            "I delay everything until the last minute",
+            "I need motivation to stop procrastinating",
+            "Procrastination is ruining my productivity"
+        ],
+        "responses": [
+            "Procrastination is rarely about laziness—it's typically an emotional regulation problem. We procrastinate to avoid negative feelings associated with tasks (boredom, anxiety, frustration). Try the 'emotion-first approach': before tackling the task, acknowledge your feelings about it without judgment. This simple act of emotional awareness can reduce the psychological barrier to starting.",
+            "Implement the '5-Minute Rule'—commit to working on the postponed task for just five minutes with permission to stop after that time. This overcomes the initial resistance that fuels procrastination, and once started, you'll often continue beyond five minutes due to reduced activation energy and the satisfaction of progress. The key is making the initial commitment extremely small.",
+            "Break overwhelming tasks into 'micro-tasks' that can be completed in 15 minutes or less. For example, instead of 'write report,' create micro-tasks like 'create outline,' 'write introduction,' 'complete first section,' etc. Checking off these small achievements provides dopamine hits that motivate continued progress, while making large projects feel manageable.",
+            "Create accountability systems tailored to your personality. External accountability works well for 'obligers' (people who meet others' expectations but struggle with self-imposed ones)—find a buddy, join a working group, or use commitment devices like public declarations. For 'questioners' who need strong rationales, clearly articulate personal benefits of completing tasks on time.",
+            "Modify your environment to reduce procrastination triggers. This might mean working in a different location, using website blockers during focused work periods, putting your phone in another room, or creating a dedicated workspace that signals 'work mode' to your brain. Environmental cues significantly influence behavior patterns, often more effectively than willpower alone."
+        ]
+    },
+    {
+        "tag": "relationship-communication",
+        "patterns": [
+            "How to improve communication with my partner?",
+            "We keep misunderstanding each other",
+            "I feel like my partner doesn't listen",
+            "Communication issues in my relationship",
+            "How to express needs to my partner?",
+            "We argue about the same things repeatedly",
+            "Tips for healthy relationship communication",
+            "How to resolve relationship conflicts?"
+        ],
+        "responses": [
+            "Practice active listening by temporarily setting aside your perspective to fully understand your partner's experience. Use the reflective listening technique: paraphrase what they've shared ('What I'm hearing is...') before responding with your viewpoint. This validates their experience and confirms understanding before moving forward, preventing the common issue of parallel conversations where neither party feels truly heard.",
+            "Schedule regular 'state of the relationship' conversations during neutral times, not during conflicts. Set aside 30 minutes weekly to check in using a structured format: share appreciations, discuss ongoing issues calmly, and express upcoming needs. This proactive approach prevents issues from festering and creates a dedicated space for relationship maintenance that doesn't feel like conflict.",
+            "Learn to recognize and interrupt negative communication patterns like criticism, defensiveness, contempt, and stonewalling (identified by relationship researcher John Gottman as the 'Four Horsemen'). Replace these with their antidotes: using 'I' statements instead of criticism, taking responsibility instead of defending, expressing respect instead of contempt, and taking breaks instead of stonewalling.",
+            "Develop awareness of your attachment styles (secure, anxious, avoidant, or disorganized) and how they influence communication, especially during stress. Attachment styles affect how we express needs, respond to conflict, and interpret partner behavior. Understanding these patterns helps depersonalize conflicts and develop appropriate communication strategies for your specific dynamic.",
+            "Implement the 'speaker-listener technique' during difficult conversations: The speaker holds an object representing the conversational turn and speaks about their feelings using 'I' statements. The listener cannot interrupt and must paraphrase before responding. Then roles switch. This structured approach prevents interruptions, defensiveness, and the escalation that derails productive communication."
+        ]
+    },
+    {
+        "tag": "mindfulness-practice",
+        "patterns": [
+            "How do I practice mindfulness?",
+            "I want to start meditation",
+            "How to be more present?",
+            "Benefits of mindfulness",
+            "Mindfulness techniques for beginners",
+            "How to quiet my mind?",
+            "Is mindfulness effective for anxiety?",
+            "Simple ways to be more mindful"
+        ],
+        "responses": [
+            "Begin with the 'STOP' practice—a micro-mindfulness technique you can use anytime: Stop what you're doing, Take a breath, Observe your thoughts/feelings/sensations without judgment, and Proceed with awareness. This brief practice interrupts autopilot mode and can be used throughout the day, making mindfulness practical rather than something requiring special conditions.",
+            "For beginners, guided mindfulness practices often work better than unguided sessions. Start with just 5 minutes daily using free apps like Insight Timer, Healthy Minds Program, or UCLA Mindful. Consistency matters more than duration—5 minutes daily is more beneficial than 30 minutes once a week. Gradually increase session length as the practice becomes more comfortable.",
+            "Incorporate informal mindfulness into daily activities: Choose one routine task each day (brushing teeth, washing dishes, walking to your car) and perform it with complete attention to sensory details—sounds, textures, smells, movements. This approach makes mindfulness a natural part of your day rather than another item on your to-do list.",
+            "Mindfulness doesn't require stopping thoughts (an impossible task) but rather changing your relationship with them. Practice the 'clouds in the sky' technique—imagine your thoughts as clouds passing across the sky of your mind. You are the observer watching them pass, not the thoughts themselves. This perspective helps create distance from rumination and worry.",
+            "Research shows mindfulness particularly benefits conditions involving rumination, including anxiety, depression, and chronic pain. For maximum effectiveness, combine formal practices (seated meditation) with informal practices (mindful walking, eating) and attitude practices (non-judgment, acceptance, and curiosity toward your experiences throughout the day)."
+        ]
+    },
+    {
+        "tag": "physical-activity",
+        "patterns": [
+            "How to start exercising?",
+            "I'm too tired to exercise",
+            "Best exercises for mental health",
+            "How can exercise help depression?",
+            "I don't enjoy working out",
+            "Simple ways to be more active",
+            "Exercise motivation tips",
+            "How much exercise do I need for well-being?"
+        ],
+        "responses": [
+            "The mental health benefits of exercise begin at surprisingly low thresholds—just 20-30 minutes of moderate movement three times weekly shows significant effects on depression and anxiety. Start with this minimum effective dose rather than comparing yourself to fitness enthusiasts. Remember that walking counts as legitimate exercise—research shows that 30 minutes of brisk walking produces comparable mood benefits to more intense activities.",
+            "Find your 'movement personality' by experimenting with different formats: Some people thrive with social exercise (team sports, group classes), others prefer solitary activities (running, swimming). Some enjoy structured routines, while others prefer spontaneous movement. Some are motivated by competition, others by connection with nature. There's no universal 'best exercise'—the one that supports your mental health is the one you'll actually do consistently.",
+            "Use the 'habit stacking' technique to overcome initial resistance: attach brief movement to existing habits in your routine. For example, do five minutes of stretching while your morning coffee brews, take a quick walk after every meal, or do squats while brushing your teeth. These micro-sessions accumulate throughout the day while bypassing the motivation barrier of longer workouts.",
+            "Exercise doesn't require special equipment, locations, or large time blocks. Try 'exercise snacking'—brief 2-5 minute movement breaks throughout your day (like 20 jumping jacks, a flight of stairs, or a quick dance to one song). Research shows these short bursts effectively improve mood, energy, and focus while being much easier to incorporate into busy schedules.",
+            "If traditional exercise feels unappealing, focus on playful movement instead—activities that bring joy rather than being done for health benefits. Dancing, recreational sports, active games, gardening, or even playing energetically with children or pets count as legitimate physical activity. The psychological benefits often exceed those of dutiful exercise done solely for health reasons."
+        ]
+    },
+    {
+        "tag": "gratitude-practice",
+        "patterns": [
+            "How to practice gratitude?",
+            "Benefits of being grateful",
+            "I want to appreciate life more",
+            "How to start a gratitude journal?",
+            "Gratitude exercises for happiness",
+            "How to feel more thankful",
+            "Does gratitude help with depression?",
+            "Ways to cultivate gratitude daily"
+        ],
+        "responses": [
+            "Effective gratitude practice goes beyond listing generic items—aim for depth over breadth. Instead of naming several things you're grateful for, choose one specific thing and explore it thoroughly: What about it enriches your life? How would life be different without it? What effort or circumstance made it possible? This deeper reflection activates neural pathways associated with positive emotion more effectively than surface-level listing.",
+            "Novel gratitude experiences create stronger positive emotions than familiar ones. Try the 'gratitude variety challenge': Each day for a week, choose a different category for reflection (people, opportunities, physical abilities, small pleasures, challenges overcome, etc.). This approach prevents habituation—the tendency to feel less impact from repeated experiences—keeping your gratitude practice fresh and meaningful.",
+            "Transform gratitude into action through 'gratitude visits' or letters—identify someone who positively influenced your life but whom you've never properly thanked. Write a specific, detailed letter describing their impact, then read it to them in person if possible. Research by positive psychologist Martin Seligman found this exercise creates significant wellbeing benefits lasting up to three months.",
+            "Practice 'mental subtraction'—deliberately imagine your life without something valuable (a relationship, opportunity, ability, or possession). This creates the psychological contrast needed to fully appreciate what might otherwise be taken for granted. Research shows this approach generates stronger positive emotions than simply noting what you're grateful for without the contrasting scenario.",
+            "For gratitude skeptics or those experiencing depression, start with a simple 'what went well' practice. Each evening, note three things that went well during the day, no matter how small, and briefly explain why they happened. This builds the cognitive habit of noticing positive events—especially important when negative bias is strong—without requiring immediate emotional shifts that might feel inauthentic."
+        ]
+    },
+    {
+        "tag": "purpose-meaning",
+        "patterns": [
+            "How to find my purpose in life?",
+            "I feel like my life has no meaning",
+            "Ways to discover life purpose",
+            "How to feel more fulfilled?",
+            "Finding meaning in everyday life",
+            "I'm not sure what I want in life",
+            "How to live with more purpose?",
+            "What gives life meaning?"
+        ],
+        "responses": [
+            "Purpose often emerges from action rather than contemplation. Try the 'purpose sampling' approach: Identify 3-5 activities or causes that interest you and commit to exploring each for 2-4 weeks through volunteering, courses, or informational interviews. This experiential sampling provides concrete data about what energizes you, rather than relying on abstract thinking to discover purpose.",
+            "Meaning is found in contribution, connection, and competence. Reflect on when you've felt most alive or engaged—what were you doing, with whom, and what strengths were you using? These peak experiences often contain clues to your personal meaning. Look for patterns across various meaningful moments rather than seeking one grand purpose that encompasses everything.",
+            "Create a 'constellation of meaning' instead of seeking a single purpose. Research shows most fulfilled people derive meaning from multiple sources—relationships, creative expression, learning, contribution to others, connection to nature, spiritual practice, etc. Developing several meaningful elements creates a more resilient sense of purpose than relying on one primary source.",
+            "Purpose often emerges at the intersection of three elements: what you're good at (your strengths), what you enjoy (your passions), and what addresses a need in the world (your contribution). Create a Venn diagram with these three circles and look for activities that inhabit the overlapping center—these represent potential pathways to meaningful engagement.",
+            "Meaningfulness differs from happiness—meaningful activities may sometimes involve struggle, challenge, or even temporary discomfort. Reflect on times when you chose difficulty over ease because something mattered deeply. These moments often reveal values that can guide purpose development. Consider what you're willing to suffer for—this often points toward what gives your life meaning."
+        ]
+    },
+    {
+        "tag": "greeting",
+        "patterns": [
+          "hello", "hi", "hey", "good morning", "good afternoon", "good evening",
+          "namaste", "namaskar", "ram ram", "jai shree ram", "sat sri akal",
+          "hello ji", "hi ji", "kaise ho", "kaise hai", "kya haal hai",
+          "aap kaise hain", "kaisa chal raha hai", "sab theek", "sab badhiya",
+          "kya scene hai", "wassup", "hello bhai", "hello dost", "kya kar rahe ho",
+          "kidhar ho", "kahan ho", "hello beta", "hello beta ji", "hello bhaiya", 
+          "hello didi", "kaise ho aap", "aaj kaisa din raha", "kya chal raha hai"
+        ],
+        "responses": [
+          "Hello! How can I help you today?",
+          "Hi there! How are you feeling?",
+          "Namaste! Aapki kya help kar sakta hoon main?",
+          "Hello ji! Kaise hain aap?",
+          "Hi! Aaj aapka din kaisa raha?",
+          "Namaste! Kya main aapki kisi tarah se madad kar sakta hoon?",
+          "Hello! Main aapka virtual mental health assistant hoon. Aap mujhse kuch bhi pooch sakte hain.",
+          "Ram ram ji! Aapka swagat hai. Aaj aap kaise feel kar rahe hain?",
+          "Hello! Aaj aapka mood kaisa hai?",
+          "Namaste! Aap kaisi feeling mehsoos kar rahe hain aaj?",
+          "Hi there! I'm here to support you. Aap kya discuss karna chahenge?",
+          "Sat sri akal! Main aapki kya madad kar sakta hoon?",
+          "Hello ji! Aapka din shubh ho. Kya aap kisi pareshani mein hain?",
+          "Namaste! Aap apne mann ki baat freely share kar sakte hain.",
+          "Hi! Aapki tabiyat kaisi hai aaj?"
+        ]
+      },
+      {
+        "tag": "depression_symptoms",
+        "patterns": [
+          "What are symptoms of depression?", "depression symptoms", "How do I know if I'm depressed",
+          "depression ke lakshan", "depression ke symptoms", "depression ke symptoms kya hain",
+          "mujhe hamesha dukhi feel hota hai", "main sad rehta hoon", "main bahut sad feel karta hoon",
+          "mujhe kuch achha nahi lagta", "mujhe kuch acha nahi lagta aajkal",
+          "life mein maza nahi aa raha", "life boring lag rahi hai", "jeene ka mann nahi karta",
+          "neend nahi aati", "bhookh nahi lagti", "concentration nahi hota",
+          "padhai mein man nahi lagta", "kaam mein man nahi lagta", "energy nahi hai", 
+          "thaka hua feel karta hoon", "thaki hui feel karti hoon", "bahut thakaan feel hoti hai",
+          "kuch karne ka mann nahi karta", "motivation nahi milti", "khush nahi rehta",
+          "main depression mein hoon kya", "kya mujhe depression hai", "mujhe depression hai kya",
+          "main bahut lonely feel karta hoon", "main bahut akela feel karta hoon",
+          "zindagi mein koi purpose nahi hai", "life mein koi purpose nahi lagta",
+          "main failure hoon", "mujhe lagta hai main failure hoon",
+          "main bekar hoon", "main worthless feel karta hoon", "meri koi value nahi hai",
+          "suicide thoughts aate hain", "mujhe suicide ke thoughts aate hain",
+          "marna chahta hoon", "jeene ka man nahi karta", "life is meaningless"
+        ],
+        "responses": [
+          "Depression ke common symptoms include persistent sadness, loss of interest in activities, changes in sleep and appetite, fatigue, feeling worthless, and difficulty concentrating. Agar ye symptoms 2 weeks se zyada time se hain, to doctor se baat karna important hai.",
+          
+          "Depression ke kuch common lakshan hain: lagatar udaasi mehsoos karna, activities mein interest kho dena, neend aur bhookh mein parivartan, thakaan, khud ko bekaar samajhna, aur concentration mein problems. Agar aap inme se kuch feel kar rahe hain, to professional help lena zaroori hai.",
+          
+          "Udaasi, interest loss, neend na aana ya bahut zyada sona, bhookh kam lagna ya bahut zyada khana, energy ki kami, concentration problems, khud ko worthless feel karna - ye depression ke signs ho sakte hain. Agar aapko ye symptoms regular feel ho rahe hain, to doctor se baat karna important hai.",
+          
+          "Depression ke symptoms diverse ho sakte hain: constant sadness, anhedonia (cheezon mein maza na aana), sleep disturbances, appetite changes, fatigue, worthlessness feelings, aur suicidal thoughts bhi. Is tarah ke thoughts hain to turant help seek karein.",
+          
+          "Jab aap depressed hote hain, to aap constantly sad feel kar sakte hain, normal activities mein interest kho sakte hain, sleep cycle disturb ho sakta hai, bhookh badh ya ghat sakti hai, energy level low ho sakta hai, aur focus karna mushkil ho sakta hai. Professional help lena bahut important hai.",
+          
+          "Depression ke primary indicators hain: persistent sadness, pleasure ka loss, sleep disturbances, weight/appetite changes, psychomotor agitation ya retardation, energy loss, guilt feelings, concentration problems, aur death ke thoughts. Agar aapko ye symptoms dikhayi de rahe hain, to please professional help lein.",
+          
+          "Depression sirf sadness nahi hai. Isme aap feel kar sakte hain: constant emptiness, hopelessness, irritability, anxiety, guilt, worthlessness, aur even physical symptoms jaise body aches aur pains jo kisi medical reason se explain nahi hote. Doctor se consult karna zaroori hai.",
+          
+          "Aapke symptoms depression ke ho sakte hain agar: aap lagatar 2 weeks se udaas hain, activities mein interest kho diya hai, weight gain/loss hua hai, sleep problems hain, restlessness ya slowness feel karte hain, worthless ya guilty feel karte hain, concentration problems hain, aur death ke thoughts aate hain.",
+          
+          "Depression ke emotional signs mein persistent sadness, hopelessness, aur emptiness feelings shamil hain. Behavioral signs mein interest loss, energy ki kami, aur social withdrawal shamil hain. Physical signs mein sleep disturbances, appetite changes, aur unexplained aches shamil hain. Professional help seek karein.",
+          
+          "Depression ek serious condition hai jisme mood disturbances, interest loss, energy level mein kami, sleep aur appetite disturbances, guilt feelings, worthlessness, hopelessness, aur concentration problems shamil hain. Ye suicide thoughts tak lead kar sakta hai. Professional help lena bahut important hai."
+        ]
+      },
+      {
+        "tag": "anxiety_symptoms",
+        "patterns": [
+          "What are anxiety symptoms", "anxiety ke lakshan", "anxiety ke symptoms",
+          "mujhe bahut tension rehti hai", "main bahut tensed rehta hoon", "mujhe bahut tension hoti hai",
+          "mujhe ghabrahat hoti hai", "mere dil ki dhadkan tez ho jati hai", "mera dil tez dhadakta hai",
+          "mere haath kaampte hain", "mujhe panic attack aate hain", "panic attack kya hota hai",
+          "mujhe saans lene mein takleef hoti hai", "meri saans phool jaati hai",
+          "main bahut zyada sochta rehta hoon", "main overthinking karta hoon",
+          "mujhe neend nahi aati tension ke kaaran", "tension ke wajah se so nahi pata",
+          "mujhe dar lagta hai", "mujhe bahut dar lagta hai", "main darr jaata hoon",
+          "mujhe public speaking se dar lagta hai", "logo ke saamne bolne se dar lagta hai",
+          "mujhe social anxiety hai", "social situations se darr lagta hai",
+          "kya main anxiety patient hoon", "mujhe anxiety hai kya", "anxiety ke symptoms kya hain",
+          "mera dimag shant nahi rehta", "mera mind relax nahi hota", "dimag mein bahut thoughts aate hain",
+          "mind mein bahut saare negative thoughts aate hain", "negative thoughts nahi rok pata"
+        ],
+        "responses": [
+          "Anxiety ke common symptoms mein constant worry, restlessness, irritability, muscle tension, sleep problems, difficulty concentrating, aur physical symptoms like rapid heartbeat, sweating, aur shortness of breath shamil hain. Agar aapko ye symptoms persistent lag rahe hain, to professional help seek karein.",
+          
+          "Anxiety ke lakshan include: lagatar chinta karna, bechain rehna, irritable feel karna, muscles mein tension, neend ki problems, concentration mein difficulty, aur physical symptoms jaise tez dhadkan, pasina aana, aur saans lene mein takleef. Professional help important hai.",
+          
+          "Jab aap anxiety experience karte hain, to aap constant worry feel kar sakte hain, restless ho sakte hain, easily irritated ho sakte hain, muscle tension ho sakti hai, neend mein disturbance ho sakta hai, aur aapko physical symptoms jaise rapid heartbeat, sweating, aur breathing difficulties ho sakte hain.",
+          
+          "Anxiety ke symptoms diverse hote hain: persistent worry, overthinking, concentration problems, sleep issues, irritability, fatigue, aur physical symptoms jaise racing heart, sweating, trembling, breathing difficulty, aur dizziness. Ye symptoms aapke daily functioning ko affect kar sakte hain.",
+          
+          "Anxiety mein aap mentally feel kar sakte hain: constant worry, racing thoughts, impending doom feeling. Physically: rapid heartbeat, sweating, trembling, breathing problems, dizziness, nausea, aur muscle tension. In symptoms se daily life affect ho sakti hai, isliye help seek karna important hai.",
+          
+          "Anxiety ke primary indicators hain: excessive worrying, restlessness, fatigue, concentration problems, irritability, muscle tension, aur sleep disturbances. Physical symptoms mein rapid heartbeat, sweating, trembling, shortness of breath, dizziness, aur GI disturbances shamil hain.",
+          
+          "Anxiety sirf worry nahi hai. Isme bahut se symptoms ho sakte hain jaise intrusive thoughts, rumination, avoidance behaviors, sleep disturbances, concentration problems, aur physical symptoms jaise chest tightness, rapid heartbeat, sweating, aur nausea. Professional help lena zaroori hai.",
+          
+          "Aapke symptoms anxiety ke ho sakte hain agar aap continuous worry feel karte hain, restless feel karte hain, easily tired ho jate hain, concentrate karne mein difficulty hoti hai, irritable hain, muscle tension hai, aur sleep problems hain, along with physical symptoms like rapid heartbeat.",
+          
+          "Anxiety ke emotional signs mein excessive fear, worry, aur apprehension shamil hain. Behavioral signs mein avoidance behaviors aur restlessness shamil hain. Physical signs mein rapid heartbeat, sweating, trembling, breathing difficulty, muscle tension, aur GI problems shamil hain.",
+          
+          "Anxiety ek condition hai jisme excessive worry, fear, aur physical symptoms jaise racing heart, sweating, trembling, shortness of breath, muscle tension, aur sleep problems shamil hain. Ye symptoms aapke daily life ko significantly affect kar sakte hain. Professional help seek karna important hai."
+        ]
+      },
+      {
+        "tag": "stress_management",
+        "patterns": [
+          "How to manage stress", "stress management tips", "stress kam kaise karein",
+          "stress se kaise deal karein", "stress ko kaise handle karein", "tension kam kaise kare",
+          "tension door kaise kare", "tension se mukti", "stress se mukti",
+          "main bahut stressed hoon", "mujhe bahut stress hai", "stress se pareshaan hoon",
+          "office stress bahut hai", "work stress handle nahi hota", "padhai ka stress",
+          "exam stress", "exam ka tension", "family stress", "relationship stress",
+          "stress ki wajah se neend nahi aati", "stress ki wajah se concentrate nahi kar pata",
+          "stress ki wajah se tabiyat kharab ho jati hai", "stress kam karne ke upay",
+          "stress kam karne ke liye yoga", "stress kam karne ke liye meditation",
+          "stress kam karne ke tarike", "tension kam karne ke gharelu upay",
+          "stress management techniques", "stress relief tips", "tension durr karne ke upay"
+        ],
+        "responses": [
+          "Stress kam karne ke liye, try karo: regular exercise, proper sleep, deep breathing exercises, meditation, yoga, balanced diet, time management, social support, hobbies pursue karna, aur zaroorat pade to professional help lena. Daily routine mein thoda time self-care ke liye nikalna important hai.",
+          
+          "Stress manage karne ke effective ways include: daily physical activity, mindfulness practice, balanced diet, proper sleep, social connections maintain karna, limits set karna, realistic goals rakhna, relaxation techniques jaise deep breathing practice karna, aur professional help seek karna if needed.",
+          
+          "Stress ko handle karne ke liye aap ye try kar sakte hain: regular exercise (30 minutes daily), meditation (10-15 minutes daily), deep breathing exercises, adequate sleep (7-8 hours), healthy eating, time management, socializing with loved ones, aur hobbies pursue karna.",
+          
+          "Tension kam karne ke kuch practical tips: subah jaldi uthkar exercise karo, meditation ya pranayama practice karo, balanced diet lo, adequate hydration maintain karo, proper sleep lo, social connections maintain karo, aur apne thoughts aur feelings journal mein likho.",
+          
+          "Stress management ke liye effective techniques: progressive muscle relaxation, guided imagery, deep breathing exercises, mindfulness meditation, yoga, regular physical activity, healthy eating, proper sleep hygiene, time management, aur boundaries set karna important hai.",
+          
+          "Tension ko kam karne ke liye: apne time ko better manage karein, 'no' kehna seekhein, realistic expectations rakhein, exercise ko routine mein shamil karein, meditation ya deep breathing practice karein, apni feelings share karein, aur professional help lein if needed.",
+          
+          "Stress se deal karne ke natural ways: regular physical activity, meditation, yoga, deep breathing exercises, adequate sleep, balanced nutrition, caffeine aur alcohol limit karna, social support seek karna, time management improve karna, aur realistic goals set karna.",
+          
+          "Stress relief ke liye quick techniques: 4-7-8 breathing (4 seconds inhale, 7 seconds hold, 8 seconds exhale), 5-minute meditation, short walk, stretching exercises, favorite music sunna, loved ones se baat karna, ya phir creative activity mein engage hona try karein.",
+          
+          "Office stress manage karne ke liye: work-life balance maintain karein, breaks lein, prioritize tasks, delegate when possible, workspace ko organized rakhein, colleagues se openly communicate karein, after-work relaxation routine develop karein, aur professional help lein if needed.",
+          
+          "Exam stress kam karne ke liye: proper study schedule banayein, regular breaks lein, physical activity ko routine mein shamil karein, healthy diet maintain karein, adequate sleep lein, relaxation techniques practice karein, aur realistic expectations rakhein. Remember, perfection impossible hai."
+        ]
+      },
+      {
+        "tag": "sleep_problems",
+        "patterns": [
+          "Neend nahi aati", "sleep problems", "insomnia", "can't sleep",
+          "raat ko neend nahi aati", "sone mein problem hai", "neend ki problem",
+          "neend ke liye kya karein", "better sleep tips", "neend lane ke tarike",
+          "How to improve sleep", "neend kaise aaye", "neend ki goli",
+          "sleeping pills", "insomnia treatment", "insomnia ka ilaj",
+          "raat bhar jagna", "subah jaldi uthna mushkil hai", "din mein neend aati hai",
+          "thakaan lagne par bhi neend nahi aati", "dimag shant nahi hota sote waqt",
+          "restless sleep", "disturbed sleep", "poor sleep quality",
+          "sleep hygiene", "better sleep ke liye tips", "neend ki quality improve kaise karein",
+          "phone dekhne se neend nahi aati", "screen time affecting sleep"
+        ],
+        "responses": [
+          "Neend improve karne ke liye: fixed sleep schedule follow karein, comfortable sleeping environment create karein, screen time limit karein (especially before bed), caffeine aur alcohol avoid karein, regular exercise karein (but not before bedtime), aur relaxation techniques try karein jaise meditation.",
+          
+          "Better sleep ke liye important tips: consistent sleep schedule (weekends mein bhi), relaxing bedtime routine develop karein, blue light exposure limit karein (especially at night), comfortable mattress aur pillows use karein, room ko dark, quiet aur cool rakhein.",
+          
+          "Neend ki problems ke liye practical solutions: har roz same time pe sone aur uthne ki koshish karein, afternoon naps avoid karein, caffeine aur alcohol limit karein, exercise regularly karein (lekin sone se 2-3 hours pehle nahi), aur bedtime pe relaxation techniques try karein.",
+          
+          "Insomnia se deal karne ke liye: sleep restriction therapy try karein (bed pe sirf sone ke liye jayein), stimulus control (agar 20 minutes mein neend na aaye to bed se uth jayein), relaxation techniques, CBT-I (Cognitive Behavioral Therapy for Insomnia), aur agar zaroorat ho to doctor se consult karein.",
+          
+          "Neend behtar banane ke liye: consistent sleep schedule, daily exercise, sunlight exposure during day, blue light avoid karein night mein, caffeine, alcohol aur nicotine limit karein, comfortable bedroom environment create karein, aur relaxing bedtime routine develop karein.",
+          
+          "Sleep improve karne ke liye natural remedies: chamomile tea, warm milk with honey, lavender essential oil, valerian root supplements, relaxation techniques jaise progressive muscle relaxation, aur screen time limit karna. Agar problems persist karein to doctor se consult karein.",
+          
+          "Quality sleep ke liye essential habits: consistent sleep schedule, proper nutrition, regular exercise, stress management techniques, comfortable sleep environment, digital devices se break lena (especially before bed), aur substance use (caffeine, alcohol, nicotine) limit karna.",
+          
+          "Neend ki problems ke liye avoid karein: irregular sleep schedule, late afternoon/evening caffeine, heavy meals before bedtime, alcohol (neend lane mein help karta hai initially but disrupts REM sleep), long daytime naps, aur stressful activities before bed.",
+          
+          "Better sleep ke liye bedroom environment: temperature control (slightly cool is best), minimal noise, darkness (blackout curtains ya eye mask), comfortable mattress aur pillows, clean bedding, aur electronics limit karein ya phir blue light filters use karein.",
+          
+          "Sleep hygiene ke important principles: consistent sleep schedule, relaxing bedtime routine, comfortable sleep environment, regular exercise, proper nutrition, stress management, limiting electronics before bed, aur stimulants jaise caffeine, alcohol, aur nicotine limit karna important hai."
+        ]
+      },
+      {
+        "tag": "relationship_problems",
+        "patterns": [
+          "relationship problems", "marriage problems", "breakup", "divorce",
+          "relationship advice", "boyfriend girlfriend problems", "marital issues",
+          "rishtey mein problems", "husband wife problems", "pati patni ke jhagde",
+          "girlfriend se jhagda", "boyfriend se jhagda", "boyfriend cheating kar raha hai",
+          "girlfriend cheating kar rahi hai", "partner trust nahi karta", "partner ko trust nahi kar pata",
+          "relationship mein trust issues", "trust todna", "breakup ke baad move on kaise karein",
+          "ex ko bhulana hai", "divorce ke baad life", "toxic relationship", "abusive relationship",
+          "relationship mein communication gap", "partner ko samajhna mushkil hai",
+          "long distance relationship problems", "arranged marriage problems", "love marriage problems",
+          "parents relationship ko accept nahi karte", "family rishtey ko nahi manti"
+        ],
+        "responses": [
+          "Relationship problems solve karne ke liye communication bahut important hai. Apne feelings openly but respectfully express karein, actively listen karein, blame game se bachein, aur compromise karna seekhein. Agar problems resolve nahi ho rahe hain, to couples counseling consider karein.",
+          
+          "Relationship ko improve karne ke liye: regular quality time spend karein, effective communication develop karein, expectations clearly set karein, appreciate aur acknowledge karein partner ko, conflicts ko constructively resolve karein, aur trust build karein.",
+          
+          "Healthy relationship ke foundations: mutual respect, trust, honesty, good communication, support, independence, aur healthy boundaries. In aspects ko strengthen karne se relationship problems ko address karne mein help milegi.",
+          
+          "Breakup ke baad heal karne ke liye: apne emotions ko acknowledge karein, self-care pe focus karein, support system build karein, new hobbies explore karein, journaling try karein, professional help lein if needed, aur healing ke liye time dein khud ko.",
+          
+          "Relationship mein trust rebuild karne ke liye: transparency increase karein, promises ko keep karein, consistent rahein actions mein, past mistakes acknowledge karein, forgiveness seek karein genuinely, aur patience rakhein - trust rebuild hone mein time lagta hai.",
+          
+          "Communication improve karne ke liye relationship mein: active listening practice karein, 'I' statements use karein blame karne ki jagah, non-verbal cues pe dhyaan dein, appropriate time aur place pe sensitive topics discuss karein, aur respectful rahein even during disagreements.",
+          
+          "Toxic relationship identify karne ke signs: constant criticism, controlling behavior, lack of trust, isolation from friends/family, frequent lying, emotional/physical abuse, lack of support, jealousy, aur disrespect. Agar aap toxic relationship mein hain, to professional help seek karein.",
+          
+          "Long-distance relationship maintain karne ke liye: regular communication maintain karein, virtual date nights plan karein, future plans discuss karein, trust build karein, visits plan karein jab possible ho, aur individual growth continue karein.",
+          
+          "Family opposition se deal karne ke liye: calmly aur respectfully apne relationship ke bare mein baat karein, unki concerns sun kar address karein, time dein adjustment ke liye, cultural differences ko bridge karne ki koshish karein, aur professional counseling consider karein if needed.",
+          
+          "Divorce ya separation ke baad: grief process ko acknowledge karein, support system build karein, self-care pe focus karein, financial independence develop karein, positive coping mechanisms develop karein, aur professional help lein adjustment mein."
+        ]
+      },
+      {
+        "tag": "motivation_self_improvement",
+        "patterns": [
+          "motivation kaise badhaye", "self improvement tips", "apne aap ko improve kaise karein",
+          "procrastination se kaise bachein", "procrastination se kaise deal karein", 
+          "motivation nahi hai", "lazy feel karta hoon", "productive kaise banein", 
+          "self confidence kaise badhaye", "confidence kaise badhaye", "self esteem improve kaise karein",
+          "life mein success kaise paaye", "khud ko improve karne ke tarike", 
+          "goal setting kaise karein", "goals achieve kaise karein", "apne life mein discipline kaise layein",
+          "bad habits kaise chhodein", "good habits kaise develop karein", "life mein focus kaise banaye rakhein",
+          "distraction se kaise bachein", "time management tips", "career growth ke liye kya karein",
+          "personal development ke liye kya karein", "skills kaise improve karein",
+          "procrastination se kaise ladein", "self discipline kaise develop karein"
+        ],
+        "responses": [
+          "Self-improvement ke liye: specific, measurable goals set karein, daily productive habits develop karein, comfort zone se bahar niklen, new skills seekhein, reading habit develop karein, mentors find karein, aur failures se seekhne ki habit develop karein.",
+          
+          "Motivation badhane ke liye: clear goals set karein, goals ko smaller tasks mein break karein, progress track karein, rewards system create karein, visualization practice karein, positive self-talk karein, aur inspiration ke sources find karein.",
+          
+          "Procrastination se deal karne ke liye: Pomodoro technique try karein (25 minutes focus, 5 minutes break), tasks ko smaller chunks mein divide karein, most important tasks subah complete karein, distractions limit karein, aur accountability partner find karein.",
+          
+          "Confidence build karne ke liye: positive self-talk practice karein, achievements celebrate karein (chote bhi), comfort zone se regularly bahar niklen, skills improve karein, physical health aur appearance pe work karein, aur failure ko learning opportunity ke roop mein dekhein.",
+          
+          "Productivity improve karne ke liye: priority-based to-do lists create karein, time-blocking technique use karein, deep work sessions schedule karein, most important tasks pehle complete karein, multitasking avoid karein, aur regular breaks lein.",
+          
+          "Habits develop karne ke liye: start small (tiny habits se shuruat karein), consistency maintain karein, environmental cues use karein, accountability establish karein, habit stacking try karein (existing habits ke saath new habits ko link karein), aur progress track karein.",
+          
+          "Personal growth ke liye: continuous learning embrace karein, feedback accept karein, self-reflection practice karein, gratitude journal maintain karein, comfort zone se bahar niklen, aur helpful resources (books, podcasts, courses) find karein.",
+          
+          "Self-discipline develop karne ke liye: clear goals set karein, temptations remove karein environment se, small wins celebrate karein, consistent daily routine maintain karein, self-care prioritize karein, aur visualization techniques use karein.",
+          
+          "Career growth ke liye: continuous learning embrace karein, networking develop karein, mentor find karein, strengths aur weaknesses identify karein, skill gaps fill karein, work portfolio build karein, aur opportunities actively seek karein.",
+          
+          "Focus improve karne ke liye: digital distractions limit karein, deep work schedule karein, environment optimize karein, meditation practice karein, adequate sleep lein, physical exercise include karein, aur brain-boosting nutrition follow karein."
+        ]
+      },
+      {
+        "tag": "student_problems",
+        "patterns": [
+          "exam stress", "exam ka tension", "padhai mein concentration nahi hota",
+          "study tips", "padhai kaise karein", "exam preparation tips", "exams ki taiyari kaise karein",
+          "marks improve kaise karein", "study focus kaise badhaye", "padhai mein man nahi lagta",
+          "exam anxiety", "exam me ghabrahat hoti hai", "exam phobia", "test anxiety",
+          "padhne ka man nahi karta", "padhai boring lagti hai", "studies me interest nahi hai",
+          "career selection", "career guidance", "kaunsa course choose karoon",
+          "kaunsa stream lena chahiye", "college kaise choose karein", "job ya further studies",
+          "parhai mein time management", "assignments complete karne ka pressure",
+          "raat ko jaakar padhai", "last minute preparation", "backlog cover kaise karein"
+        ],
+        "responses": [
+          "Exam preparation ke liye effective tips: study schedule create karein, short breaks lein regular intervals pe, active recall practice karein, past papers solve karein, proper sleep lein, balanced diet maintain karein, aur physical activity include karein routine mein.",
+          
+          "Padhai mein concentration improve karne ke liye: distraction-free environment create karein, Pomodoro technique (25 min study, 5 min break) follow karein, phone notifications off karein, adequate sleep lein, aur physical exercise include karein daily routine mein.",
+          
+          "Exam anxiety manage karne ke liye: deep breathing exercises practice karein, positive self-talk karein, proper preparation ensure karein, visualization techniques use karein, adequate sleep lein, balanced diet follow karein, aur caffeine intake limit karein.",
+          
+          "Study interest increase karne ke liye: subject ko real-life applications se connect karein, interactive study methods use karein, study groups join karein, rewards system create karein, aur different study techniques experiment karein (visual aids, mind maps, teaching others).",
+          
+          "Time management for students: priority-based to-do lists banayein, difficult subjects ko fresh mind ke saath tackle karein, realistic goals set karein, time-blocking technique use karein, aur procrastination avoid karne ke liye tasks ko smaller chunks mein break karein.",
+          
+          "Career selection ke liye: apne interests, strengths, aur values identify karein, career counseling seek karein, professionals se baat karein different fields mein, internships ya volunteering karein exposure ke liye, aur research karein potential careers ke scope aur growth ke bare mein.",
+          
+          "Last-minute preparation ke liye: important topics identify karein, concise notes review karein, formula sheets ya mind maps use karein quick revision ke liye, practice questions solve karein, adequate sleep lein, aur calm rahne ki koshish karein.",
+          
+          "Study motivation increase karne ke liye: clear goals set karein, study environment ko comfortable aur distraction-free banayein, rewards system implement karein, study buddy ya accountability partner find karein, aur progress track karein.",
+          
+          "Academic performance improve karne ke liye: regular attendance maintain karein, active participation karein class mein, notes regularly review karein, doubts immediately clear karein, study groups join karein, aur spaced repetition technique use karein for better retention.",
+          
+          "College selection ke liye important factors: course quality, faculty expertise, placement record, infrastructure, location, fees structure, scholarships, extracurricular opportunities, aur alumni network. In factors ko apne priorities ke according evaluate karein."
+        ]
+      }
+    
  ]
 
 } 

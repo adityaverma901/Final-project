@@ -1,159 +1,282 @@
-"use client"; // This marks the file as a client component
+"use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { Send, YoutubeIcon, BookOpen, Dumbbell, Music, Info, Volume2, VolumeX } from 'lucide-react';
+import DOMPurify from 'dompurify';
 import styles from "./Chatbot.module.css";
-import Navdash from "@/components/nav-dash"; // Import the Navdash component
-import DOMPurify from "dompurify";
+import Navdash from "@/components/nav-dash";
 
-// Define message type
+// Enhanced Recommendation Interface
+interface Recommendation {
+  title: string;
+  description: string;
+  link: string;
+  category: string;
+  imageUrl?: string;
+}
+
+// Message Interface - Added TTS-related properties
 interface Message {
   sender: "user" | "bot";
   text: string;
+  recommendations?: Recommendation[];
+  isSpeaking?: boolean;
 }
 
 export default function Chatbot() {
   const [username, setUsername] = useState('');
   const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput] = useState<string>(""); 
-  const [isClient, setIsClient] = useState<boolean>(false); // To check if rendering on client
-  const [isSpeaking, setIsSpeaking] = useState<boolean>(false); // To track speech status
-  const [speechInstance, setSpeechInstance] = useState<SpeechSynthesisUtterance | null>(null); // To store the current speech instance
-  const [isPaused, setIsPaused] = useState<boolean>(false); // To track if speech is paused
+  const [input, setInput] = useState<string>("");
+  const [isClient, setIsClient] = useState<boolean>(false);
+  const [recommendations, setRecommendations] = useState<Recommendation[]>([]);
+  const [showSidebar, setShowSidebar] = useState<boolean>(false);
+  const chatWindowRef = useRef<HTMLDivElement>(null);
+  
+  // TTS State
+  const [speechSynthesis, setSpeechSynthesis] = useState<SpeechSynthesis | null>(null);
+  const [currentUtterance, setCurrentUtterance] = useState<SpeechSynthesisUtterance | null>(null);
 
-  // Get username from localStorage
+  // Category Icons Mapping
+  const categoryIcons = {
+    'Music': <Music className={styles.categoryIcon} />,
+    'Exercise': <Dumbbell className={styles.categoryIcon} />,
+    'Article': <BookOpen className={styles.categoryIcon} />,
+    'Video': <YoutubeIcon className={styles.categoryIcon} />
+  };
+
+  // Initialize username and client-side rendering
   useEffect(() => {
-    const storedUsername = localStorage.getItem('user');
-    if (storedUsername) {
-      setUsername(storedUsername);
+    const storedUsername = localStorage.getItem('user') || "User";
+    setUsername(storedUsername);
+    setIsClient(true);
+    
+    // Initialize speech synthesis
+    if (typeof window !== 'undefined') {
+      setSpeechSynthesis(window.speechSynthesis);
     }
+    
+    // Initial welcome message
+    setMessages([{ 
+      sender: "bot", 
+      text: `Hello ${storedUsername}, how can I help you today?`,
+      isSpeaking: false 
+    }]);
   }, []);
 
-  // Set isClient to true after the component mounts
+  // Auto-scroll to bottom of chat
   useEffect(() => {
-    setIsClient(true);
+    if (chatWindowRef.current) {
+      chatWindowRef.current.scrollTop = chatWindowRef.current.scrollHeight;
+    }
+  }, [messages, recommendations]);
 
-    // Simulate fetching the user's name (replace with actual API call)
-    const fetchUserName = async () => {
-      try {
-        // Initial bot message with username
-        setMessages([{ sender: "bot", text: `Hello ${username}, how can I assist you today?` }]);
-      } catch (error) {
-        console.error("Error fetching user name:", error);
-        setMessages([{ sender: "bot", text: "Hello! How can I assist you today?" }]); // Fallback message
-      }
+  // TTS Functionality
+  const startSpeaking = (messageIndex: number) => {
+    if (!speechSynthesis) return;
+
+    // Stop any ongoing speech
+    speechSynthesis.cancel();
+
+    // Create new utterance
+    const utterance = new SpeechSynthesisUtterance(messages[messageIndex].text);
+    setCurrentUtterance(utterance);
+
+    // Update message to indicate speaking
+    const updatedMessages = [...messages];
+    updatedMessages[messageIndex].isSpeaking = true;
+    setMessages(updatedMessages);
+
+    // Speaking events
+    utterance.onend = () => {
+      const endedMessages = [...messages];
+      endedMessages[messageIndex].isSpeaking = false;
+      setMessages(endedMessages);
+      setCurrentUtterance(null);
     };
 
-    fetchUserName();
-  }, [username]); // Add username as dependency so this runs when username is loaded
+    // Speak the message
+    speechSynthesis.speak(utterance);
+  };
 
+  const stopSpeaking = () => {
+    if (speechSynthesis && currentUtterance) {
+      speechSynthesis.cancel();
+      
+      // Reset speaking state for all messages
+      const updatedMessages = messages.map(msg => ({
+        ...msg, 
+        isSpeaking: false
+      }));
+      setMessages(updatedMessages);
+      
+      setCurrentUtterance(null);
+    }
+  };
+
+  // Send message handler
   const sendMessage = async () => {
-    if (!input.trim()) return; // Ignore empty messages
+    if (!input.trim()) return;
 
-    // Add user message to chat
-    setMessages((prevMessages) => [...prevMessages, { sender: "user", text: input }]);
+    // Add user message
+    const userMessage: Message = { 
+      sender: "user", 
+      text: input 
+    };
+    setMessages(prev => [...prev, userMessage]);
 
     try {
-      const response = await fetch("http://localhost:5000/get-response", {
+      const response = await fetch("http://localhost:5000/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ input }),
+        body: JSON.stringify({ message: input }),
       });
       const data = await response.json();
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        { sender: "bot", text: data.response },
-      ]);
+
+      // Create bot message with isSpeaking set to false
+      const botMessage: Message = { 
+        sender: "bot", 
+        text: data.text || "I'm here to help!",
+        recommendations: data.recommendations || [],
+        isSpeaking: false
+      };
+      setMessages(prev => [...prev, botMessage]);
+
+      // Handle recommendations
+      if (data.recommendations && data.recommendations.length > 0) {
+        setRecommendations(data.recommendations);
+        setShowSidebar(true);
+      } else {
+        setShowSidebar(false);
+      }
     } catch (error) {
       console.error("Error fetching chatbot response:", error);
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        { sender: "bot", text: "Sorry, something went wrong. Please try again." },
-      ]);
+      setMessages(prev => [...prev, { 
+        sender: "bot", 
+        text: "Sorry, something went wrong. Please try again.",
+        isSpeaking: false
+      }]);
     }
 
-    setInput(""); // Clear input field after sending
+    // Reset input
+    setInput("");
   };
 
-  // Function to handle Text-to-Speech
-  const speakText = (text: string) => {
-    const speech = new SpeechSynthesisUtterance(text);
-    speech.lang = "en-US"; // Set language
-    speech.rate = 1; // Normal speaking rate
-    setSpeechInstance(speech);
-    window.speechSynthesis.speak(speech);
-    setIsSpeaking(true);
-    setIsPaused(false);
+  // Render recommendation card
+  const renderRecommendationCard = (rec: Recommendation, index: number) => {
+    // Determine icon based on category, fallback to Info icon
+    const CategoryIcon = categoryIcons[rec.category as keyof typeof categoryIcons] || <Info />;
+
+    return (
+      <div key={index} className={styles.recommendationCard}>
+        <div className={styles.recommendationCardHeader}>
+          {CategoryIcon}
+          <h3>{rec.category}</h3>
+        </div>
+        
+        {rec.imageUrl && (
+          <div className={styles.recommendationImageContainer}>
+            <img 
+              src={rec.imageUrl} 
+              alt={rec.title} 
+              className={styles.recommendationImage} 
+            />
+          </div>
+        )}
+        
+        <div className={styles.recommendationCardContent}>
+          <h4>{rec.title}</h4>
+          <p>{rec.description}</p>
+          <a 
+            href={rec.link} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={styles.recommendationLink}
+          >
+            View Resource
+          </a>
+        </div>
+      </div>
+    );
   };
 
-  const pauseSpeech = () => {
-    if (speechInstance && window.speechSynthesis.speaking) {
-      window.speechSynthesis.pause();
-      setIsPaused(true);
-    }
+  // Render method for individual messages with TTS controls
+  const renderMessage = (msg: Message, index: number) => {
+    // Only show TTS button for bot messages
+    const isBotMessage = msg.sender === "bot";
+    
+    return (
+      <React.Fragment key={index}>
+        <div 
+          className={msg.sender === "user" ? styles.userMessage : styles.botMessage}
+        >
+          {isBotMessage && (
+            <div className={styles.ttsControls}>
+              {msg.isSpeaking ? (
+                <VolumeX 
+                  onClick={stopSpeaking} 
+                  className={styles.ttsIcon} 
+                />
+              ) : (
+                <Volume2 
+                  onClick={() => startSpeaking(index)} 
+                  className={styles.ttsIcon} 
+                />
+              )}
+            </div>
+          )}
+          <div 
+            dangerouslySetInnerHTML={{ 
+              __html: DOMPurify.sanitize(msg.text) 
+            }} 
+          />
+        </div>
+        
+        {/* Inline Recommendations for Mobile/Small Screens */}
+        {msg.recommendations && msg.recommendations.length > 0 && (
+          <div className={styles.inlineRecommendations}>
+            {msg.recommendations.map((rec, recIndex) => (
+              <div key={recIndex} className={styles.inlineRecommendationCard}>
+                <strong>{rec.title}</strong>
+                <p>{rec.description}</p>
+                <a href={rec.link} target="_blank" rel="noopener noreferrer">
+                  View Resource
+                </a>
+              </div>
+            ))}
+          </div>
+        )}
+      </React.Fragment>
+    );
   };
 
-  const resumeSpeech = () => {
-    if (speechInstance && window.speechSynthesis.paused) {
-      window.speechSynthesis.resume();
-      setIsPaused(false);
-    }
-  };
-
-  const restartSpeech = () => {
-    if (speechInstance) {
-      window.speechSynthesis.cancel(); // Cancel current speech
-      speakText(speechInstance.text); // Restart speech
-    }
-  };
-
-  if (!isClient) return null; // Return nothing on server render
+  // Render method
+  if (!isClient) return null;
 
   return (
-    <div>
-      <Navdash />
-      <div className={styles.background}>
+    <div className={styles.container}>
+      {/* Left Sidebar */}
+      <aside className={styles.leftSidebar}>
+        <div className={styles.sidebarContent}>
+          <p className={styles.username}>{username}</p>
+          <button className={styles.sidebarButton}>Settings</button>
+          <button className={styles.sidebarButton}>Logout</button>
+        </div>
+      </aside>
+
+      {/* Main Chat Section */}
+      <div className={styles.mainContent}>
+        <Navdash />
+
         <div className={styles.chatbotContainer}>
           <div className={styles.chatbotTitle}>Inner Voice</div>
           <div className={styles.chatbotSubtitle}>Your Mental Health Companion</div>
-          <div className={styles.chatWindow}> 
 
-            {messages.map((msg, index) => (  
-              <div
-                key={index}
-                className={msg.sender === "user" ? styles.userMessage : styles.botMessage}
-              >
-                <div
-                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(msg.text) }}
-                />
-
-                {msg.sender === "bot" && (
-                  <div className={styles.speechControls}>
-                    <button onClick={() => speakText(msg.text)} className={styles.speakButton} title="Speak">
-                      🔊
-                      <span className={styles.iconText}>Speak</span>
-                    </button>
-                    {isSpeaking && !isPaused && (
-                      <button onClick={pauseSpeech} className={styles.pauseButton} title="Pause">
-                        ⏸
-                        <span className={styles.iconText}>Pause</span>
-                      </button>
-                    )}
-                    {isSpeaking && isPaused && (
-                      <button onClick={resumeSpeech} className={styles.resumeButton} title="Resume">
-                        ▶
-                        <span className={styles.iconText}>Resume</span>
-                      </button>
-                    )}
-                    {isSpeaking && (
-                      <button onClick={restartSpeech} className={styles.restartButton} title="Restart">
-                        🔄
-                        <span className={styles.iconText}>Restart</span>
-                      </button>
-                    )}
-                  </div>
-                )}
-              </div>
-            ))}
+          {/* Chat Window */}
+          <div 
+            ref={chatWindowRef} 
+            className={styles.chatWindow}
+          >
+            {messages.map(renderMessage)}
           </div>
 
           {/* Input Container */}
@@ -164,16 +287,37 @@ export default function Chatbot() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className={styles.inputField}
-              onKeyPress={(e) => {
+              onKeyDown={(e) => {
                 if (e.key === 'Enter') sendMessage();
               }}
             />
-            <button onClick={sendMessage} className={styles.sendButton}>
-              Send
+            <button 
+              onClick={sendMessage} 
+              className={styles.sendButton}
+            >
+              <Send size={20} />
             </button>
           </div>
         </div>
       </div>
+
+      {/* Right Sidebar (Dynamic Recommendations) */}
+      {showSidebar && (
+        <aside className={styles.rightSidebar}>
+          <div className={styles.recommendationsSectionHeader}>
+            <h3>Recommendations</h3>
+            <button 
+              onClick={() => setShowSidebar(false)}
+              className={styles.closeRecommendationsButton}
+            >
+              ×
+            </button>
+          </div>
+          <div className={styles.recommendationsContainer}>
+            {recommendations.map(renderRecommendationCard)}
+          </div>
+        </aside>
+      )}
     </div>
   );
 }

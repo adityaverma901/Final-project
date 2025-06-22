@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -12,30 +6,66 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
 model User {
-  id            Int           @id @default(autoincrement())
-  email         String        @unique
-  passwordHash  String
-  name          String
-  role          Role
-  createdAt     DateTime      @default(now())
-  updatedAt     DateTime      @updatedAt
-  doctorProfile Doctor?
-  appointments  Appointment[]
-  chatHistory   ChatHistory[]
-  quizResult    QuizResult?
+  id             Int            @id @default(autoincrement())
+  email          String         @unique
+  passwordHash   String
+  name           String
+  role           Role
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  doctorProfile  Doctor?
+  patientProfile PatientProfile?
+  appointments   Appointment[]
+  chatHistory    ChatHistory[]
+  quizResult     QuizResult?
 }
 
+model PatientProfile {
+  id                   Int      @id @default(autoincrement())
+  userId               Int      @unique
+  gender              String?
+  age                 Int?
+  height              Float?
+  weight              Float?
+  profession          String?
+  workHours           Int?
+  exerciseFrequency   String?
+  exerciseType        String?
+  smoking             Boolean? @default(false)
+  alcohol             Boolean? @default(false) // Changed to Boolean for consistency
+  waterIntake         Float?
+  medicalHistory      String?   @db.Text
+  familyMedicalHistory String?  @db.Text
+  chronicConditions   String?   @db.Text
+  mentalHealthConcerns String?  @db.Text
+  stressLevel         Int?      // Changed to Int for numeric scale (1-10)
+  sleepHours         Int?
+  sleepQuality       Int?      // Changed to Int for rating scale (1-10)
+  screenTime         Int?
+  allergies          String?   @db.Text
+  medication         String?   @db.Text
+  caffeine           Int?
+  maritalStatus      String?
+  diet              String?
+  insuranceProvider  String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+ 
 model Doctor {
-  id             Int           @id @default(autoincrement())
-  userId         Int           @unique
-  specialization String
-  profileInfo    String
-  availableTimes Json         // Changed from String to Json for better data handling
-  createdAt      DateTime      @default(now())
-  updatedAt      DateTime      @updatedAt
-  user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
-  appointments   Appointment[]
+  id              Int       @id @default(autoincrement())
+  userId          Int       @unique
+  specialization  String
+  profileInfo     String
+  availableTimes  Json      // Kept as JSON for flexible scheduling
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  appointments    Appointment[]
 }
 
 model Appointment {
@@ -72,6 +102,8 @@ model QuizResult {
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
   user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
 }
 
 enum Role {
